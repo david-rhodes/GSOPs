@@ -1,0 +1,14 @@
+{
+    "path": "$GSOPS",
+    "load_package_once": true,
+    "version": "20.0",
+    "enable": true,
+    "env": [
+        {
+            "GSOPS": "C:/Users/{USER}/Documents/GitHub/GSOPs"
+        },
+        {
+            "GSOPS_VERSION": "0.1"
+        }
+    ]
+}
