@@ -1,9 +1,14 @@
 # GSOPs (Gaussian Splat Operators) for SideFX Houdini
 
+[![Watch the video](https://img.youtube.com/vi/CNo7H39OaE8/hqdefault.jpg)](https://www.youtube.com/embed/CNo7H39OaE8)  
+[Watch the video](https://www.youtube.com/embed/CNo7H39OaE8)
+
 ## About
 Use GSOPs to import, edit, and export gaussian splat models, or generate synthetic training data. Synthetic data is capable of producing high-fidelity models with view-dependent effects, relatively small file sizes, and incredible rendering performance on most modern devices.
 
-With GSOPs, you can isolate objects or sections, remove noise and floaters, deform and animate models, perform scene composition, and mesh splats.
+With GSOPs, you can isolate objects or sections, eliminate noise and floaters, deform and animate models, compose scenes, mesh splats, and conduct feature analysis.
+
+<img src="https://raw.githubusercontent.com/david-rhodes/GSOPs/develop/help/images/feature_analysis.png" title="Gaussian Splatting feature analysis comparison." alt="Gaussian Splat feature analysis comparison." width="800" height="800">
 
 The following SOP nodes are provided:
 * `gaussian_splats_align_by_points`: Aligns a gaussian splat model to the world origin.
