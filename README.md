@@ -1,4 +1,4 @@
-# GSOPs (Gaussian Splat Operators) for SideFX Houdini
+# GSOPs (Gaussian Splat Operators) for SideFX Houdini 20
 
 [![Watch the video](https://img.youtube.com/vi/CNo7H39OaE8/hqdefault.jpg)](https://www.youtube.com/embed/CNo7H39OaE8)  
 [Watch the video](https://www.youtube.com/embed/CNo7H39OaE8)
@@ -20,6 +20,7 @@ The following SOP nodes are provided:
 * `gaussian_splats_generate_training_data`: Generate synthetic data suitable for training gaussian splat models.
 * `gaussian_splats_import`: Loads a trained gaussian splat model, converting all relevant data to native Houdini point attributes.
 * `gaussian_splats_import_cameras`: Imports the cameras.json file generated as a result of training gaussian splat models.
+* [__NEW__] `gaussian_splats_transform`: Transforms a gaussian splat model, especially useful for scaling.
 * `gaussian_splats_visualize_boxes`: Visualize gaussian splats as opaque boxes.
 
 For more information, please reference the built-in help cards. *(SideFX, if you are reading this, thank you for making an incredible documentation system!)*
@@ -33,7 +34,7 @@ For more information, please reference the built-in help cards. *(SideFX, if you
 * If you're interested in what you've seen and would like to discuss short-term innovation/R&D collaboration opportunities, please contact me: david.a.rhodes.3d@gmail.com.
 
 ## Installation
-1. Clone this repository.
+1. For the latest and greatest, clone this repository (`develop` branch). Alternatively, for a more stable build, download the [latest release](https://github.com/david-rhodes/GSOPs/releases).
 2. Copy the GSOPs.json file found in the repository root, and paste it in the $HOUDINI_USER_PREF_DIR/packages/ folder. You may need to create this folder.
 3. Edit the GSOPs.json file you just pasted, and modify the $GSOPS path found inside to the the location used in step one.
 
@@ -46,10 +47,10 @@ For more information, please reference the built-in help cards. *(SideFX, if you
 ## Known Issues
 I consider GSOPs to be a professional-grade prototyping toolset. It is not free from error, and the user experience could be improved in many areas. Here are some of the known issues:
 * Rotating a splat model will not update spherical harmonics data accordingly. As a result, view-dependent lighting effects will not behave correctly in exported models.
-* Scaling a splat model will not scale individual splats, leading to visible artifacts in exported models.
+* [__FIXED__] Scaling a splat model will not scale individual splats, leading to visible artifacts in exported models. _Use `gaussian_splats_transform` to scale splat models._
 * Rendering the viewport with `gaussian_splats_generate_training_data` will always use the viewport aspect ratio as the camera resolution aspect ratio (with a maxmium dominant resolution of 720 in Houdini Apprentice). This is because I could not find a python hook to set the viewport size. As a workaround, be sure to set your viewport size manually before performing viewport renders.
 * It is possible to create bad export data when using the `unpack` feature of `gaussian_splats_visualize_boxes`. As a workaround, simply avoid having this node in any data stream leading to an export node.
-* The`gaussian_splats_feature_analysis visualizer` sometimes fails to refresh (toggle the visualize button as a workaround), and this sometimes  precedes as Houdini crash. The UX when dealing with very small or large attribute values needs improvement.
+* The`gaussian_splats_feature_analysis visualizer` sometimes fails to refresh (toggle the visualize button as a workaround), and this often precedes a Houdini crash. Also, the UX when dealing with very small or large attribute values needs improvement.
 * View-dependent lighting effects (i.e., spherical harmonics) can only be previewed with the "Toy" operator: `gaussian_splats_evaluate_spherical_harmonics`. This node is not yet documented, but it's available if you're feeling brave.
 * There's quite a bit of python in the project which needs additional error handling.
 * I briefly tested GSOPs on OSX, but it was developed on Windows. Please report bugs.
@@ -62,6 +63,7 @@ Here's my personal wish list for community contributions (but feel free to bring
 - [ ] Karma/LOPS render support (this has been requested by a few people already).
 - [ ] [Segment Any 3D GAussians (SAGA)](https://github.com/Jumpat/SegAnyGAussians) or similar segmentation integration.
 - [ ] Custom python viewer states + "magic wand" functionality (e.g., spatial-aware selection according to attribute similarity).
+- [ ] [Splat lighting toolkit](https://www.youtube.com/watch?v=5-oFqtbg6xM).
 - [ ] PDG/TOPS support for batching and automation (probably to generate synthetic training data with `gaussian_splats_generate_training_data`).
 - [ ] Improved camera coverage generator for `gaussian_splats_generate_training_data`. My first-pass (object-centric) implementation is somewhat naive. It would also be great to have a camera coverage solver for environments.
 - [ ] Icons (I borrowed the best-match icons I could find from SideFX, but custom icons would be great).
