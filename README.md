@@ -40,7 +40,7 @@ For more information, please reference the built-in help cards. *(SideFX, if you
 
 ## Help
 * All digital assets exist in the SOPS context and (most) have their own help card documentation.
-* Examples scenes and content exist in the `hip` directory. Use these to understand gaussian splat workflows.
+* Examples scenes and content exist in the `hip` directory. Use these to understand gaussian splat workflows. Examples will work best if you have SideFX Labs installed.
 * For demonstrations of what GSOPs are capable of, please see [GSOPS on LinkedIn](https://www.linkedin.com/feed/hashtag/?keywords=gsops).
 * Houdini provides many wonderful tools that will help you work with Gaussian Splat data. If you're not already familiar, check out the following SOP nodes: point cloud normal/surface, VDB from particles/polygons, cluster, and group (w/keep in bounding regions).
 
