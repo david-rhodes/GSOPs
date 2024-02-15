@@ -20,6 +20,7 @@ The following SOP nodes are provided:
 * `gaussian_splats_generate_training_data`: Generate synthetic data suitable for training gaussian splat models.
 * `gaussian_splats_import`: Loads a trained gaussian splat model, converting all relevant data to native Houdini point attributes.
 * `gaussian_splats_import_cameras`: Imports the cameras.json file generated as a result of training gaussian splat models.
+* [__NEW__] `gaussian_splats_relight_ibl`: Relight gaussian splat models using image-based lighting techniques.
 * [__NEW__] `gaussian_splats_transform`: Transforms a gaussian splat model, especially useful for scaling.
 * `gaussian_splats_visualize_boxes`: Visualize gaussian splats as opaque boxes.
 
@@ -47,7 +48,6 @@ For more information, please reference the built-in help cards. *(SideFX, if you
 ## Known Issues
 I consider GSOPs to be a professional-grade prototyping toolset. It is not free from error, and the user experience could be improved in many areas. Here are some of the known issues:
 * Rotating a splat model will not update spherical harmonics data accordingly. As a result, view-dependent lighting effects will not behave correctly in exported models.
-* [__FIXED__] Scaling a splat model will not scale individual splats, leading to visible artifacts in exported models. _Use `gaussian_splats_transform` to scale splat models._
 * Rendering the viewport with `gaussian_splats_generate_training_data` will always use the viewport aspect ratio as the camera resolution aspect ratio (with a maxmium dominant resolution of 720 in Houdini Apprentice). This is because I could not find a python hook to set the viewport size. As a workaround, be sure to set your viewport size manually before performing viewport renders.
 * It is possible to create bad export data when using the `unpack` feature of `gaussian_splats_visualize_boxes`. As a workaround, simply avoid having this node in any data stream leading to an export node.
 * The`gaussian_splats_feature_analysis visualizer` sometimes fails to refresh (toggle the visualize button as a workaround), and this often precedes a Houdini crash. Also, the UX when dealing with very small or large attribute values needs improvement.
