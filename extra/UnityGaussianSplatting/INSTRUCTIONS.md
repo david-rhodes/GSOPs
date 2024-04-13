@@ -8,3 +8,5 @@ To play and capture splat sequences in Unity, using one .ply file per frame, fol
 7. Set the `SplatAssetsDirectory` to the path from step 4. 
 8. Play the game and watch your gaussian splatting animation.
 9. Leverage Unity API's [ScreenCapture.CaptureScreenshot](https://docs.unity3d.com/ScriptReference/ScreenCapture.CaptureScreenshot.html) to "render" your animation.
+
+<img src="https://raw.githubusercontent.com/david-rhodes/GSOPs/develop/help/images/unity_splat_sequences.png" title="Gaussian Splatting Unity Sequences." alt="Gaussian Splatting Unity Sequences info." width="1920">
