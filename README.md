@@ -72,4 +72,4 @@ Major kudos to the original inventors of Gaussian Splatting, [Inria and the Max 
 
 Finally, thank you, community! Your support, interest, and rapid contributions to gaussian splatting have inspired and motivated me. 
 
-Enjoy!
+Enjoy! :)
