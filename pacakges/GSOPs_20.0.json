@@ -11,7 +11,7 @@
             [
                 { "houdini_os == 'windows'" : "$GSOPS/houdini-gsplat-renderer/compiled/windows/20.0" },
                 { "houdini_os == 'linux'" : "$GSOPS/houdini-gsplat-renderer/compiled/linux/20.0" },
-                { "houdini_os == 'osx'" : "$GSOPS/houdini-gsplat-renderer/compiled/osx/20.0" }
+                { "houdini_os == 'macos'" : "$GSOPS/houdini-gsplat-renderer/compiled/macos/20.0" }
             ]
         }
     ],
