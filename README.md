@@ -37,8 +37,9 @@ For more information, please reference the built-in help cards. *(SideFX, if you
 * If you're interested in what you've seen and would like to discuss short-term innovation/R&D collaboration opportunities, please contact me: david.a.rhodes.3d@gmail.com.
 
 ## Installation
-1. For the latest and greatest, clone this repository (`develop` branch). Alternatively, for a more stable build, download the [latest release](https://github.com/david-rhodes/GSOPs/releases).
-2. Copy the GSOPs.json file found in the repository root, and paste it in the $HOUDINI_USER_PREF_DIR/packages/ folder. You may need to create this folder.
+1. For the latest and greatest, clone this repository (`renderer` branch). Alternatively, for a more stable build, download the [latest release](https://github.com/david-rhodes/GSOPs/releases).
+    a. Either clone with `--recurse-submodules`, or run `git submodule init` followed by `git submodule update`. 
+2. Copy the `packages` directory found in the repository root, and paste it in the $HOUDINI_USER_PREF_DIR folder. 
 3. Edit the GSOPs.json file you just pasted, and modify the $GSOPS path found inside to the the location used in step one.
 
 ## Help
