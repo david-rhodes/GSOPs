@@ -1,4 +1,4 @@
-## GSOPs 1.5 (and above) for SideFX Houdini, Copyright (c) David Rhodes and Ruben Diaz
+## GSOPs 1.5 for SideFX Houdini, Copyright (c) David Rhodes and Ruben Diaz
 
 GNU AFFERO GENERAL PUBLIC LICENSE
 Version 3, 19 November 2007
@@ -662,29 +662,9 @@ if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU AGPL, see
 <https://www.gnu.org/licenses/>.
 
-## GSOPs 1.0 for SideFX Houdini, Copyright (c) 2024 David Rhodes
+**Note: GSOPs 1.0 was released under the the MIT license. GSOPs versions released after 1.0 use the above license (AGPL 3.0).**
 
-MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-## GSOPs (all versions) also contains the following components (as modules), and their associated licenses:
+## GSOPs also contains the following components (as modules), and their associated licenses:
 
 plyfile.py (pyply)
 ```
