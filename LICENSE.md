@@ -1,4 +1,4 @@
-## GSOPs 1.5 for SideFX Houdini, Copyright (c) David Rhodes and Ruben Diaz
+## GSOPs 2.0 for SideFX Houdini, Copyright (c) David Rhodes and Ruben Diaz
 
 GNU AFFERO GENERAL PUBLIC LICENSE
 Version 3, 19 November 2007
