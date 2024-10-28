@@ -32,10 +32,13 @@ We're passionate about the potential of editable radiance fields in SideFX Houdi
 * `gaussian_splats_export`: Exports Houdini gaussian splat geometry to disk, converting all relevant point data to native gaussian splat attributes in the process.
 * `gaussian_splats_feature_analysis`: Perform statistical analysis of gaussian splat models.
 * `gaussian_splats_generate_training_data`: Generate synthetic data suitable for training gaussian splat models.
+* **[NEW]** `gaussian_splats_hald_clut`: Apply color adjustment to splats based on Hald Color Look-Up Table textures.
 * `gaussian_splats_import`: Loads a trained gaussian splat model, converting all relevant data to native Houdini point attributes.
 * `gaussian_splats_import_cameras`: Imports the cameras.json file generated as a result of training gaussian splat models.
 * `gaussian_splats_relight_ibl`: Relight gaussian splat models using image-based lighting techniques.
+* **[NEW]** `gaussian_splats_transform`: Translate, rotate, and scale splats.
 * `gaussian_splats_visualize_boxes`: Visualize gaussian splats as opaque boxes.
+* **[NEW]** `GSplatSource`: Converts point geometry (as defined by `gaussian_splats_import`) into "GSplat" primitives, enabling their rendering in the viewport.
 
 For more information, please reference the built-in help cards. *(SideFX, if you are reading this, thank you for making an incredible documentation system!)*
 
@@ -67,7 +70,8 @@ For more information, please reference the built-in help cards. *(SideFX, if you
 
 ## Known Issues
 We consider GSOPs to be a professional-grade prototyping toolset. It is not free from error, and the user experience could be improved in many areas. Here are some of the known issues:
-* For accurate color results, [disable OpenColorIO in the viewport](https://vimeo.com/1001396463). For Windows users, you may also need to disable viewport lighting.
+* For accurate color results, [disable OpenColorIO in the viewport](https://vimeo.com/1001396463). You may also need to disable viewport lighting.
+* The `GSplatSource` SOP does not currently have an output. This means it must exist at the end of you network. We intend to change this so that it's embedded in the `gaussian_splats_import` SOP for a better user experience.
 * Rotating a splat model will not update spherical harmonics data accordingly. As a result, view-dependent lighting effects will not behave correctly in exported models. **We hope this will be resolved in GSOPs 2.0**
 * Rendering the viewport with `gaussian_splats_generate_training_data` will always use the viewport aspect ratio as the camera resolution aspect ratio (with a maxmium dominant resolution of 720 in Houdini Apprentice). This is because I could not find a python hook to set the viewport size. As a workaround, be sure to set your viewport size manually before performing viewport renders. As an alternative, you can render the scene using [flipbook](https://www.sidefx.com/docs/houdini/render/flipbook.html).
 * It is possible to create bad export data when using the `unpack` feature of `gaussian_splats_visualize_boxes`. As a workaround, avoid having this node in any data stream leading to an export node.
