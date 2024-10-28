@@ -1,17 +1,27 @@
-# GSOPs (Gaussian Splat Operators) for SideFX Houdini 20
+# GSOPs (Gaussian Splatting Operators) for SideFX Houdini 20.5
 
-[![Watch the video](https://img.youtube.com/vi/CNo7H39OaE8/hqdefault.jpg)](https://www.youtube.com/embed/CNo7H39OaE8)  
-[Watch the video](https://www.youtube.com/embed/CNo7H39OaE8)
+[Watch the GSOPs Showcase](https://www.youtube.com/watch?v=5V7mBuVxlt4)
+
+[![GSOPs Showcase Video](help/images/gsops_promo.png)](https://www.youtube.com/watch?v=5V7mBuVxlt4)
 
 ## About
-Use GSOPs to import, edit, and export gaussian splat models, or generate synthetic training data. Synthetic data is capable of producing high-fidelity models with view-dependent effects, relatively small file sizes, and incredible rendering performance on most modern devices.
+GSOPs is a collaborative project from [David Rhodes](https://www.linkedin.com/in/davidarhodes/) and [Ruben Diaz](https://www.linkedin.com/in/rubendz/). 
 
-With GSOPs, you can isolate objects or sections, eliminate noise and floaters, deform and animate models, compose scenes, mesh splats, and conduct feature analysis.
+Houdini's powerful, data-efficient architecture makes it the go-to platform for procedural content production across many industries. Its flexible and extensible design empowers users to tackle complex challenges at the right level of abstraction, focusing on problem-solving rather than low-level technicalities.
+
+This unique combination of flexibility and ease of use is especially valuable in the rapidly evolving field of Novel View Synthesis. It enables quick prototyping, testing, and refinement of new workflows, keeping pace with the latest research. Additionally, it provides a direct path for innovations to transition into real-world applications within a well-established, production-ready solution.
+
+SideFX, the developer of Houdini, fosters innovation through its "Labs" initiative. This incubator allows for the iteration of new tools and workflows before they become mainstream. Similarly, GSOPs provides a dedicated playground for Novel View Synthesis, enabling users to craft new workflows that closely align with the final visual result while prioritizing a creative and enjoyable process.
+
+Use GSOPs to import, render (viewport), edit, and export 3D Gaussian splatting models, or to generate synthetic training data. Synthetic data is capable of producing high-fidelity models with view-dependent effects and performant rendering on most modern devices. Leverage GSOPs to isolate objects, eliminate noise and floaters, deform and animate models, compose scenes, mesh and relight splats, and conduct feature analysis.
 
 🥉 GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/).
-<img src="https://raw.githubusercontent.com/david-rhodes/GSOPs/develop/help/images/feature_analysis.png" title="Gaussian Splatting feature analysis comparison." alt="Gaussian Splat feature analysis comparison." width="800">
 
-The following SOP nodes are provided:
+<a href="https://www.buymeacoffee.com/gsopsproject"><img src="help/images/support_gsops.png" alt="Support GSOPs" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+Your donations help support this iniative. Thank you! 
+
+### SOP Nodes
 * `gaussian_splats_align_by_points`: Aligns a gaussian splat model to the world origin.
 * `gaussian_splats_crop`: Crops or groups a splat model.
 * `gaussian_splats_dbscan`: Density-based spatial clustering useful for removing noise and outliers.
