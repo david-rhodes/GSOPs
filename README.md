@@ -5,7 +5,7 @@
 [![GSOPs Showcase Video](help/images/gsops_promo.png)](https://www.youtube.com/watch?v=5V7mBuVxlt4)
 
 ## About
-GSOPs is a collaborative project from [David Rhodes](https://www.linkedin.com/in/davidarhodes/) and [Ruben Diaz](https://www.linkedin.com/in/rubendz/). It is comprised of a [viewport renderer](https://github.com/rubendhz/houdini-gsplat-renderer), [example files](https://github.com/david-rhodes/GSOPs/tree/develop/hip), and several digital assets to assist with common I/O and editing operations. GSOPs is developed in our personal time and is provided as-is. 
+GSOPs is a collaborative project from [David Rhodes](https://www.linkedin.com/in/davidarhodes/) and [Ruben Diaz](https://www.linkedin.com/in/rubendz/). It is comprised of a [viewport renderer](https://github.com/rubendhz/houdini-gsplat-renderer), [example files](https://github.com/david-rhodes/GSOPs/tree/develop/hip), and several digital assets to assist with common I/O and editing operations for 3DGS content. GSOPs is developed in our personal time and is provided as-is. 
 
 Use GSOPs to import, render, edit, and export 3D Gaussian splatting models, or to generate synthetic training data. Synthetic data is capable of producing high-fidelity models with view-dependent effects and performant rendering on most modern devices. GSOPs is effective for isolating objects, eliminating noise and floaters, deforming and animating splat models, composing scenes, meshing and relighting splats, and conducting feature analysis.
 
@@ -32,7 +32,7 @@ We're passionate about the potential of editable radiance fields in SideFX Houdi
 * `gaussian_splats_export`: Exports Houdini gaussian splat geometry to disk, converting all relevant point data to native gaussian splat attributes in the process.
 * `gaussian_splats_feature_analysis`: Perform statistical analysis of gaussian splat models.
 * `gaussian_splats_generate_training_data`: Generate synthetic data suitable for training gaussian splat models.
-* **[NEW]** `gaussian_splats_hald_clut`: Apply color adjustment to splats based on Hald Color Look-Up Table textures.
+* **[NEW]** `gaussian_splats_hald_clut`: Apply color adjustment to splats based on [Hald Color Look-Up Tables](https://www.quelsolaar.com/technology/clut.html).
 * `gaussian_splats_import`: Loads a trained gaussian splat model, converting all relevant data to native Houdini point attributes.
 * `gaussian_splats_import_cameras`: Imports the cameras.json file generated as a result of training gaussian splat models.
 * `gaussian_splats_relight_ibl`: Relight gaussian splat models using image-based lighting techniques.
