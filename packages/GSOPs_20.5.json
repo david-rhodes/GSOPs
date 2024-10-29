@@ -7,6 +7,9 @@
             "GSOPS": "D:/Projects/gsops_renderer" 
         },
         {
+            "GSOPS_VERSION": "2.0.0 Early Access"
+        },
+        {
             "GSPLAT_RENDERER": 
             [
                 { "houdini_os == 'windows'" : "$GSOPS/houdini-gsplat-renderer/compiled/windows/20.5" },
