@@ -11,7 +11,7 @@ Use GSOPs to import, render, edit, and export 3D Gaussian splatting models, or t
 
 For more examples of GSOPs in action, check out [GSOPS on LinkedIn](https://www.linkedin.com/feed/hashtag/?keywords=gsops) and [GSOPs on YouTube](https://www.youtube.com/playlist?list=PLBC-5xO_PccbefAB35xGOmAmWFRXLPDCo).
 
-_🥉 GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/)._
+**🥉 GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/).**
 
 [Join us on Discord!](https://discord.gg/mUTWa4Kv)
 
