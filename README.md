@@ -44,7 +44,7 @@ For more information, please reference the built-in help cards. *(SideFX, if you
 
 ## Notes
 * Please be kind. We love innovating and learning, and we want you to benefit from this project.
-* All digital assets and example scenes in this repo are currently under the Houdini Apprentice license. Because GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/), I will request an Indie license upgrade for GSOPs 2.0.
+* All digital assets and example scenes in this repo are currently under the Houdini Apprentice license. Because GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/), GSOPs 2.0 (full release) will be upgraded to Houdini Indie.
 * [Click here to download a Commercial license snapshop of GSOPs](https://media.sidefx.com/uploads/contests/H20_techart_challenge/assets/utility_03_gsops.zip). **Some features may be missing compared to this repo.**
 * Please adhere to the [SideFX Houdini License Agreement](https://www.sidefx.com/legal/license-agreement/).
 * GSOPs can generate gaussian splat training data, but it cannot train models. If you want to train models locally, please see [3D Gaussian Splatting for Real-Time Radiance Field Rendering](https://github.com/graphdeco-inria/gaussian-splatting) or [Postshot](https://www.jawset.com/).
@@ -63,7 +63,7 @@ For more information, please reference the built-in help cards. *(SideFX, if you
 * For demonstrations of what GSOPs are capable of, please see [GSOPS on LinkedIn](https://www.linkedin.com/feed/hashtag/?keywords=gsops) and [GSOPs on YouTube](https://www.youtube.com/playlist?list=PLBC-5xO_PccbefAB35xGOmAmWFRXLPDCo).
 * Examples scenes and content exist in the `hip` directory. Use these to understand Gaussian splatting workflows.
 * Houdini provides many wonderful tools that will help you work with Gaussian Splat data. If you're not already familiar, check out the following SOP nodes: point cloud normal/surface, VDB from particles/polygons, cluster, and group (w/keep in bounding regions).
-* For an amazing standalone 3D Gaussian Splat training application, please see [Postshot](https://www.jawset.com/). Use the output of `Gaussian Splats Genereate Training Data` directly in Postshot to train synthetic models!
+* For an amazing standalone 3D Gaussian Splat training application, please see [Postshot](https://www.jawset.com/). Use the output of `Gaussian Splats Generate Training Data` directly in Postshot to train synthetic models!
 
 ## Splat Animation Sequences
 * It's possible to export splat animation sequences (one .ply per file). You can load and render these in [Postshot](https://www.jawset.com/) and [Unity](https://github.com/david-rhodes/GSOPs/blob/develop/extra/UnityGaussianSplatting/INSTRUCTIONS.md).
@@ -71,7 +71,7 @@ For more information, please reference the built-in help cards. *(SideFX, if you
 ## Known Issues
 We consider GSOPs to be a professional-grade prototyping toolset. It is not free from error, and the user experience could be improved in many areas. Here are some of the known issues:
 * For accurate color results, [disable OpenColorIO in the viewport](https://vimeo.com/1001396463). You may also need to disable viewport lighting.
-* The `GSplatSource` SOP does not currently have an output. This means it must exist at the end of you network. We intend to change this so that it's embedded in the `gaussian_splats_import` SOP for a better user experience.
+* The `GSplatSource` SOP does not currently have an output. This means it must exist at the end of your network. We intend to change this so that it's embedded in the `gaussian_splats_import` SOP for a streamlined user experience.
 * Rotating a splat model will not update spherical harmonics data accordingly. As a result, view-dependent lighting effects will not behave correctly in exported models. **We hope this will be resolved in GSOPs 2.0**
 * Rendering the viewport with `gaussian_splats_generate_training_data` will always use the viewport aspect ratio as the camera resolution aspect ratio (with a maxmium dominant resolution of 720 in Houdini Apprentice). This is because I could not find a python hook to set the viewport size. As a workaround, be sure to set your viewport size manually before performing viewport renders. As an alternative, you can render the scene using [flipbook](https://www.sidefx.com/docs/houdini/render/flipbook.html).
 * It is possible to create bad export data when using the `unpack` feature of `gaussian_splats_visualize_boxes`. As a workaround, avoid having this node in any data stream leading to an export node.
