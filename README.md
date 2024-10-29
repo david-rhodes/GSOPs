@@ -9,6 +9,8 @@ GSOPs is a collaborative project from [David Rhodes](https://www.linkedin.com/in
 
 Use GSOPs to import, render, edit, and export 3D Gaussian splatting models, or to generate synthetic training data. Synthetic data is capable of producing high-fidelity models with view-dependent effects and performant rendering on most modern devices. GSOPs is effective for isolating objects, eliminating noise and floaters, deforming and animating splat models, composing scenes, meshing and relighting splats, and conducting feature analysis.
 
+For more examples of GSOPs in action, check out [GSOPS on LinkedIn](https://www.linkedin.com/feed/hashtag/?keywords=gsops) and [GSOPs on YouTube](https://www.youtube.com/playlist?list=PLBC-5xO_PccbefAB35xGOmAmWFRXLPDCo).
+
 _🥉 GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/)._
 
 [Join us on Discord!](https://discord.gg/mUTWa4Kv)
@@ -63,10 +65,10 @@ For more information regarding any of the following nodes, please reference the 
 
 ## Help
 * All digital assets exist in the SOPS context and (most) have their own help card documentation.
-* For demonstrations of what GSOPs are capable of, please see [GSOPS on LinkedIn](https://www.linkedin.com/feed/hashtag/?keywords=gsops) and [GSOPs on YouTube](https://www.youtube.com/playlist?list=PLBC-5xO_PccbefAB35xGOmAmWFRXLPDCo).
 * Examples scenes and content exist in the `hip` directory. Use these to understand Gaussian splatting workflows.
 * Houdini provides many wonderful tools that will help you work with Gaussian Splat data. If you're not already familiar, check out the following SOP nodes: point cloud normal/surface, VDB from particles/polygons, cluster, and group (w/keep in bounding regions).
 * For an amazing standalone 3D Gaussian Splat training application, please see [Postshot](https://www.jawset.com/). Use the output of `Gaussian Splats Generate Training Data` directly in Postshot to train synthetic models!
+* [Join us on Discord](https://discord.gg/mUTWa4Kv).
 
 ## Splat Animation Sequences
 * It's possible to export splat animation sequences (one .ply per file). You can load and render these in [Postshot](https://www.jawset.com/) and [Unity](https://github.com/david-rhodes/GSOPs/blob/develop/extra/UnityGaussianSplatting/INSTRUCTIONS.md).
@@ -82,7 +84,7 @@ We consider GSOPs to be a professional-grade prototyping toolset. It is not free
 * There's quite a bit of python in the project which needs additional error handling.
    
 ## Contribution Wish List
-We have not yet been able to implement all the cool ideas we have. However, in open-sourcing GSOPs, we hope to involve the community. After all, we're stronger together! Please [join us on Discord!](https://discord.gg/mUTWa4Kv). 
+We have not yet been able to implement all the cool ideas we have. However, in open-sourcing GSOPs, we hope to involve the community. After all, we're stronger together! Please [join us on Discord](https://discord.gg/mUTWa4Kv)! 
 
 Here's our wish list for community contributions (please feel free to bring your own ideas, too):
 - [x] Viewport Renderer (Thanks, [Ruben](https://github.com/rubendhz)!)
