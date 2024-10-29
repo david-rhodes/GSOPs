@@ -25,25 +25,28 @@ We're passionate about the potential of editable radiance fields in SideFX Houdi
 <a href="https://www.buymeacoffee.com/gsopsproject"><img src="help/images/support_gsops.png" alt="Support GSOPs" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
 ## SOP Nodes
+For more information regarding any of the following nodes, please reference the built-in help cards. *(SideFX, if you are reading this, thank you for making an incredible documentation system!)*
+
 * `gaussian_splats_align_by_points`: Aligns a gaussian splat model to the world origin.
 * `gaussian_splats_crop`: Crops or groups a splat model.
 * `gaussian_splats_dbscan`: Density-based spatial clustering useful for removing noise and outliers.
 * `gaussian_splats_deform`: Deform splat models using polygonal geometry.
 * `gaussian_splats_export`: Exports Houdini gaussian splat geometry to disk, converting all relevant point data to native gaussian splat attributes in the process.
 * `gaussian_splats_feature_analysis`: Perform statistical analysis of gaussian splat models.
-* `gaussian_splats_generate_training_data`: Generate synthetic data suitable for training gaussian splat models.
+* **[UPDATED]** `gaussian_splats_generate_training_data`: Generate synthetic data suitable for training gaussian splat models. _It's now possible to render and use png images for Alpha-masked training in Postshot and NerfStudio/Gsplat._
 * **[NEW]** `gaussian_splats_hald_clut`: Apply color adjustment to splats based on [Hald Color Look-Up Tables](https://www.quelsolaar.com/technology/clut.html).
 * `gaussian_splats_import`: Loads a trained gaussian splat model, converting all relevant data to native Houdini point attributes.
 * `gaussian_splats_import_cameras`: Imports the cameras.json file generated as a result of training gaussian splat models.
 * `gaussian_splats_relight_ibl`: Relight gaussian splat models using image-based lighting techniques.
-* **[UPDATED]** `gaussian_splats_transform`: Translate, rotate, and scale splats.
+* **[UPDATED]** `gaussian_splats_transform`: Translate, rotate, and scale splats. _New and improved user experience and support for splat scaling!_
 * `gaussian_splats_visualize_boxes`: Visualize gaussian splats as opaque boxes.
-* **[NEW]** `GSplatSource`: Converts point geometry (as defined by `gaussian_splats_import`) into "GSplat" primitives, enabling their rendering in the viewport.
+* **[NEW]** `GSplat Source`: Converts point geometry (as defined by `gaussian_splats_import`) into "GSplat" primitives, enabling their rendering in the viewport.
 
-For more information, please reference the built-in help cards. *(SideFX, if you are reading this, thank you for making an incredible documentation system!)*
+![GSplat Source](/help/images/gsplat_source_example.png)
 
 ## Notes
 * Please be kind. We love innovating and learning, and we want you to benefit from this project.
+* GSOPs is only supported for Houdini 20.5. This is due to an API change in the HDK. You should be able to customize your installation for Houdini 20 and use several of the digital assets, however.
 * All digital assets and example scenes in this repo are currently under the Houdini Apprentice license. Because GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/), GSOPs 2.0 (full release) will be upgraded to Houdini Indie.
 * [Click here to download a Commercial license snapshop of GSOPs](https://media.sidefx.com/uploads/contests/H20_techart_challenge/assets/utility_03_gsops.zip). **Some features may be missing compared to this repo.**
 * Please adhere to the [SideFX Houdini License Agreement](https://www.sidefx.com/legal/license-agreement/).
@@ -83,10 +86,10 @@ We have not yet been able to implement all the cool ideas we have. However, in o
 
 Here's our wish list for community contributions (please feel free to bring your own ideas, too):
 - [x] Viewport Renderer (Thanks, [Ruben](https://github.com/rubendhz)!)
+- [x] [Splat lighting toolkit](https://www.youtube.com/watch?v=5-oFqtbg6xM).
 - [ ] Karma/LOPS render support.
 - [ ] [Segment Any 3D GAussians (SAGA)](https://github.com/Jumpat/SegAnyGAussians) or similar segmentation integration.
 - [ ] Custom python viewer states + "magic wand" functionality (e.g., spatial-aware selection according to attribute similarity).
-- [x] [Splat lighting toolkit](https://www.youtube.com/watch?v=5-oFqtbg6xM).
 - [ ] PDG/TOPS support for batching and automation (probably to generate synthetic training data with `gaussian_splats_generate_training_data`).
 - [ ] Improved camera coverage generator for `gaussian_splats_generate_training_data`. The first-pass (object-centric) implementation is somewhat naive. It would also be great to have a camera coverage solver for environments.
 - [ ] Icons (the current icons are borrowed from SideFX, but custom icons would be great).
