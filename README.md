@@ -36,7 +36,7 @@ We're passionate about the potential of editable radiance fields in SideFX Houdi
 * `gaussian_splats_import`: Loads a trained gaussian splat model, converting all relevant data to native Houdini point attributes.
 * `gaussian_splats_import_cameras`: Imports the cameras.json file generated as a result of training gaussian splat models.
 * `gaussian_splats_relight_ibl`: Relight gaussian splat models using image-based lighting techniques.
-* **[NEW]** `gaussian_splats_transform`: Translate, rotate, and scale splats.
+* **[UPDATED]** `gaussian_splats_transform`: Translate, rotate, and scale splats.
 * `gaussian_splats_visualize_boxes`: Visualize gaussian splats as opaque boxes.
 * **[NEW]** `GSplatSource`: Converts point geometry (as defined by `gaussian_splats_import`) into "GSplat" primitives, enabling their rendering in the viewport.
 
