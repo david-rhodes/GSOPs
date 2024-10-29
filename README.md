@@ -66,7 +66,7 @@ For more information regarding any of the following nodes, please reference the 
 ## Getting Started
 1. Open a few example scenes from the `hip` directory. Use these to validate your installation and better understand Gaussian splatting workflows.
 2. For accurate color results, [disable OpenColorIO in the viewport](https://vimeo.com/1001396463). If you don't see your splats in the viewport, you may also need to disable viewport lighting.
-3. The `GSplat Source` SOP does not currently have an output. This means it must exist at the end of your network. (We intend to change this in the future so that it's embedded in the `gaussian_splats_import` SOP for a streamlined user experience.)
+3. The `GSplat Source` SOP (i.e., the "render" node) does not currently have an output. This means it must exist at the end of your network. (We intend to change this in the future so that it's embedded in the `gaussian_splats_import` SOP for a streamlined user experience.)
 4. Houdini provides many wonderful tools that will help you work with Gaussian Splat data. If you're not already familiar, check out the following SOP nodes: point cloud normal/surface, VDB from particles/polygons, cluster, and group (w/keep in bounding regions).
 
 ## Splat Animation Sequences
