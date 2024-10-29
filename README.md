@@ -63,20 +63,25 @@ For more information regarding any of the following nodes, please reference the 
 3. Edit the GSOPs.json file you just pasted, and modify the $GSOPS path found inside to the the location used in step one.
 4. Install the latest [SideFX Labs](https://www.sidefx.com/products/sidefx-labs/) release. 
 
-## Help
-* All digital assets exist in the SOPS context and (most) have their own help card documentation.
-* Examples scenes and content exist in the `hip` directory. Use these to understand Gaussian splatting workflows.
-* Houdini provides many wonderful tools that will help you work with Gaussian Splat data. If you're not already familiar, check out the following SOP nodes: point cloud normal/surface, VDB from particles/polygons, cluster, and group (w/keep in bounding regions).
-* For an amazing standalone 3D Gaussian Splat training application, please see [Postshot](https://www.jawset.com/). Use the output of `Gaussian Splats Generate Training Data` directly in Postshot to train synthetic models!
-* [Join us on Discord](https://discord.gg/mUTWa4Kv).
+## Getting Started
+1. Open a few example scenes from the `hip` directory. Use these to validate your installation and better understand Gaussian splatting workflows.
+2. For accurate color results, [disable OpenColorIO in the viewport](https://vimeo.com/1001396463). If you don't see your splats in the viewport, you may also need to disable viewport lighting.
+3. The `GSplat Source` SOP does not currently have an output. This means it must exist at the end of your network. (We intend to change this in the future so that it's embedded in the `gaussian_splats_import` SOP for a streamlined user experience.)
+4. Houdini provides many wonderful tools that will help you work with Gaussian Splat data. If you're not already familiar, check out the following SOP nodes: point cloud normal/surface, VDB from particles/polygons, cluster, and group (w/keep in bounding regions).
 
 ## Splat Animation Sequences
 * It's possible to export splat animation sequences (one .ply per file). You can load and render these in [Postshot](https://www.jawset.com/) and [Unity](https://github.com/david-rhodes/GSOPs/blob/develop/extra/UnityGaussianSplatting/INSTRUCTIONS.md).
 
+## Synthetic Training Data
+* You can use Houdini renders from procedural and manually generated camera poses (in COLMAP format) to convert your CG scenes to 3D Gaussian Splats. With GSOPs 2.0, PNG image support has been added to the `generate_training_data` SOP. This means you can train alpha-masked 3DGS models, producing cleaner reconstructions.
+
+## Help
+* All digital assets exist in the SOPS context and (most) have their own help card documentation.
+* [Join us on Discord](https://discord.gg/mUTWa4Kv).
+
 ## Known Issues
 We consider GSOPs to be a professional-grade prototyping toolset. It is not free from error, and the user experience could be improved in many areas. Here are some of the known issues:
-* For accurate color results, [disable OpenColorIO in the viewport](https://vimeo.com/1001396463). You may also need to disable viewport lighting.
-* The `GSplatSource` SOP does not currently have an output. This means it must exist at the end of your network. We intend to change this so that it's embedded in the `gaussian_splats_import` SOP for a streamlined user experience.
+
 * Rotating a splat model will not update spherical harmonics data accordingly. As a result, view-dependent lighting effects will not behave correctly in exported models. **We hope this will be resolved in GSOPs 2.0**
 * Rendering the viewport with `gaussian_splats_generate_training_data` will always use the viewport aspect ratio as the camera resolution aspect ratio (with a maxmium dominant resolution of 720 in Houdini Apprentice). This is because I could not find a python hook to set the viewport size. As a workaround, be sure to set your viewport size manually before performing viewport renders. As an alternative, you can render the scene using [flipbook](https://www.sidefx.com/docs/houdini/render/flipbook.html).
 * It is possible to create bad export data when using the `unpack` feature of `gaussian_splats_visualize_boxes`. As a workaround, avoid having this node in any data stream leading to an export node.
