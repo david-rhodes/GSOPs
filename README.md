@@ -94,6 +94,7 @@ We have not yet been able to implement all the cool ideas we have. However, in o
 Here's our wish list for community contributions (please feel free to bring your own ideas, too):
 - [x] Viewport Renderer (Thanks, [Ruben](https://github.com/rubendhz)!)
 - [x] [Splat lighting toolkit](https://www.youtube.com/watch?v=5-oFqtbg6xM).
+- [ ] I/O for compressed splats. One approach may be [Niantic's SPZ format](https://github.com/nianticlabs/spz).
 - [ ] Karma/LOPS render support.
 - [ ] [Segment Any 3D GAussians (SAGA)](https://github.com/Jumpat/SegAnyGAussians) or similar segmentation integration.
 - [ ] Custom python viewer states + "magic wand" functionality (e.g., spatial-aware selection according to attribute similarity).
@@ -101,7 +102,6 @@ Here's our wish list for community contributions (please feel free to bring your
 - [ ] Improved camera coverage generator for `gaussian_splats_generate_training_data`. The first-pass (object-centric) implementation is somewhat naive. It would also be great to have a camera coverage solver for environments.
 - [ ] Icons (the current icons are borrowed from SideFX, but custom icons would be great).
 - [ ] Promotional material (graphic design or other content you make using GSOPs).
-- [ ] I/O for compressed splats. There's no standardized compression format for 3DGS yet. However, [PlayCanvas' SuperSplat compressed.ply format](https://blog.playcanvas.com/compressing-gaussian-splats/) provides a good balance of simplicity and compression rates. The [discussion](https://github.com/mkkellogg/GaussianSplats3D/issues/47) around standardizing compressed 3DGS has stalled, but maybe you can help breathe life into it!
 
 ## Acknowledgements
 Thank you, community! Your support, interest, and rapid contributions to gaussian splatting have inspired and motivated us. 
