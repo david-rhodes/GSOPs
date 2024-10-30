@@ -48,7 +48,7 @@ For more information regarding any of the following nodes, please reference the 
 
 ## Notes
 * Please be kind. We love innovating and learning, and we want you to benefit from this project.
-* GSOPs is only supported for Houdini 20.5. This is due to an API change in the HDK. You should be able to customize your installation for Houdini 20 and use several of the digital assets, however.
+* GSOPs is only supported for Houdini 20.5. This is due to an API change in the HDK. You should be able to customize your installation for Houdini 20 and continue using the digital assets, however.
 * All digital assets and example scenes in this repo are currently under the Houdini Apprentice license. Because GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/), GSOPs 2.0 (full release) will be upgraded to Houdini Indie.
 * [Click here to download a Commercial license snapshop of GSOPs](https://media.sidefx.com/uploads/contests/H20_techart_challenge/assets/utility_03_gsops.zip). **Some features may be missing compared to this repo.**
 * Please adhere to the [SideFX Houdini License Agreement](https://www.sidefx.com/legal/license-agreement/).
