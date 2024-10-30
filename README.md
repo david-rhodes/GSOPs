@@ -35,7 +35,7 @@ For more information regarding any of the following nodes, please reference the 
 * `gaussian_splats_deform`: Deform splat models using polygonal geometry.
 * `gaussian_splats_export`: Exports Houdini gaussian splat geometry to disk, converting all relevant point data to native gaussian splat attributes in the process.
 * `gaussian_splats_feature_analysis`: Perform statistical analysis of gaussian splat models.
-* **[UPDATED]** `gaussian_splats_generate_training_data`: Generate synthetic data suitable for training gaussian splat models. _It's now possible to render and use png images for Alpha-masked training in Postshot and NerfStudio/Gsplat._
+* **[UPDATED]** `gaussian_splats_generate_training_data`: Generate synthetic data suitable for training gaussian splat models. _Added png image support for Alpha-masked training in Postshot and NerfStudio/Gsplat, as well as COLMAP .txt export for improved debugging._
 * **[NEW]** `gaussian_splats_hald_clut`: Apply color adjustment to splats based on [Hald Color Look-Up Tables](https://www.quelsolaar.com/technology/clut.html).
 * `gaussian_splats_import`: Loads a trained gaussian splat model, converting all relevant data to native Houdini point attributes.
 * `gaussian_splats_import_cameras`: Imports the cameras.json file generated as a result of training gaussian splat models.
