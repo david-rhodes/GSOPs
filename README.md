@@ -35,7 +35,7 @@ For more information regarding any of the following nodes, please reference the 
 * `gaussian_splats_deform`: Deform splat models using polygonal geometry.
 * `gaussian_splats_export`: Exports Houdini gaussian splat geometry to disk, converting all relevant point data to native gaussian splat attributes in the process.
 * `gaussian_splats_feature_analysis`: Perform statistical analysis of gaussian splat models.
-* **[UPDATED]** `gaussian_splats_generate_training_data`: Generate synthetic data suitable for training gaussian splat models. _Added png image support for Alpha-masked training in Postshot and NerfStudio/Gsplat, as well as COLMAP .txt export for improved debugging._
+* **[UPDATED]** `gaussian_splats_generate_training_data`: Generate synthetic data suitable for training gaussian splat models. _Added png image support for Alpha-masked training in Postshot and NerfStudio/Gsplat, as well as COLMAP txt export for improved debugging._
 * **[NEW]** `gaussian_splats_hald_clut`: Apply color adjustment to splats based on [Hald Color Look-Up Tables](https://www.quelsolaar.com/technology/clut.html).
 * `gaussian_splats_import`: Loads a trained gaussian splat model, converting all relevant data to native Houdini point attributes.
 * `gaussian_splats_import_cameras`: Imports the cameras.json file generated as a result of training gaussian splat models.
@@ -60,7 +60,7 @@ For more information regarding any of the following nodes, please reference the 
     * **Either clone with `--recurse-submodules`, or run `git submodule init` followed by `git submodule update`**. 
     * If you have separately installed [houdini-gsplat-renderer](https://github.com/rubendhz/houdini-gsplat-renderer), **it is recommneded to delete existing compiled binaries to avoid plug-in conflicts!**
 2. Copy the `packages` directory found in the repository root, and paste it in the $HOUDINI_USER_PREF_DIR folder. [More information here.](https://www.sidefx.com/docs/houdini/ref/plugins.html)
-3. Edit the GSOPs.json file you just pasted, and modify the $GSOPS path found inside to the the location used in step one.
+3. Open the GSOPs_20.5.json file inside the `packages` directory you just pasted. Modify the $GSOPS path found inside to the the location used in step one.
 4. Install the latest [SideFX Labs](https://www.sidefx.com/products/sidefx-labs/) release. 
 
 ## Getting Started
@@ -73,7 +73,7 @@ For more information regarding any of the following nodes, please reference the 
 * It's possible to export splat animation sequences (one .ply per file). You can load and render these in [Postshot](https://www.jawset.com/) and [Unity](https://github.com/david-rhodes/GSOPs/blob/develop/extra/UnityGaussianSplatting/INSTRUCTIONS.md).
 
 ## Synthetic Training Data
-* You can use Houdini renders from procedural and manually generated camera poses (in COLMAP format) to convert your CG scenes to 3D Gaussian Splats. With GSOPs 2.0, PNG image support has been added to the `generate_training_data` SOP. This means you can train alpha-masked 3DGS models, producing cleaner reconstructions.
+* You can use Houdini renders from procedural and manually generated camera poses (in COLMAP format) to convert your CG scenes to 3D Gaussian Splats. With GSOPs 2.0, png image support has been added to the `generate_training_data` SOP. This means you can train alpha-masked 3DGS models, producing cleaner reconstructions.
 
 ## Help
 * All digital assets exist in the SOPS context and (most) have their own help card documentation.
