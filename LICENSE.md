@@ -662,7 +662,7 @@ if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU AGPL, see
 <https://www.gnu.org/licenses/>.
 
-**Note: GSOPs 1.0 was released under the the MIT license. GSOPs versions released after 1.0 use the above license (AGPL 3.0).**
+**Note: GSOPs 1.0 was released under the the MIT license. GSOPs 2.0 and above are licensed under AGPL 3.0.**
 
 ## GSOPs also contains the following components (as modules), and their associated licenses:
 
