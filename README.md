@@ -6,9 +6,14 @@
 ## About
 Use GSOPs to import, edit, and export gaussian splat models, or generate synthetic training data. Synthetic data is capable of producing high-fidelity models with view-dependent effects, relatively small file sizes, and incredible rendering performance on most modern devices.
 
-With GSOPs, you can isolate objects or sections, eliminate noise and floaters, deform and animate models, compose scenes, mesh splats, and conduct feature analysis.
+With GSOPs, you can isolate objects or sections, eliminate noise and floaters, mesh splats, relight, deform and animate models, compose scenes, and conduct feature analysis.
 
 🥉 GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/).
+
+**If you find these tools useful and want to help fund the development of [GSOPs 2.0](https://youtube.com/shorts/DDpn_fw6u6c?feature=share), please consider making a donation. Thank you for your support!**
+
+<a href="https://www.buymeacoffee.com/davidrhodes" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 <img src="https://raw.githubusercontent.com/david-rhodes/GSOPs/develop/help/images/feature_analysis.png" title="Gaussian Splatting feature analysis comparison." alt="Gaussian Splat feature analysis comparison." width="800">
 
 The following SOP nodes are provided:
@@ -65,7 +70,7 @@ I consider GSOPs to be a professional-grade prototyping toolset. It is not free 
 I have not been able to implement all the cool ideas I have. However, my goal in open-sourcing GSOPs is to involve the community. After all, we're stronger together!
 
 Here's my personal wish list for community contributions (but feel free to bring your own innovations to this project):
-- [ ] Viewport Renderer (WIP--likely using [glsl](https://www.sidefx.com/docs/houdini/shade/glsl.html)).
+- [x] Viewport Renderer ([WIP](https://www.linkedin.com/posts/rubendz_gsops-gaussiansplatting-3dgs-activity-7232359618163732480-FRJs?utm_source=share&utm_medium=member_desktop)).
 - [ ] Karma/LOPS render support (this has been requested by a few people already).
 - [ ] [Segment Any 3D GAussians (SAGA)](https://github.com/Jumpat/SegAnyGAussians) or similar segmentation integration.
 - [ ] Custom python viewer states + "magic wand" functionality (e.g., spatial-aware selection according to attribute similarity).
