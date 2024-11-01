@@ -48,9 +48,10 @@ For more information regarding any of the following nodes, please reference the 
 
 ## Notes
 * Please be kind. We love innovating and learning, and we want you to benefit from this project.
-* GSOPs is only supported for Houdini 20.5. This is due to an API change in the HDK. You should be able to customize your installation for Houdini 20 and continue using the digital assets, however.
+* GSOPs is only supported for Houdini 20.5. This is due to an API change in the HDK. You should still be able to customize your installation for Houdini 20.0 and continue using the digital assets.
+* We provide precompiled binaries of [`houdini-gsplat-renderer`](https://github.com/rubendhz/houdini-gsplat-renderer) for Houdini 20.5 on Windows and MacOS. Linux is not officially supported, but you can attempt to compile it yourself. 
 * All digital assets and example scenes in this repo are currently under the Houdini Apprentice license. Because GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/), GSOPs 2.0 (full release) will be upgraded to Houdini Indie.
-* [Click here to download a Commercial license snapshop of GSOPs](https://media.sidefx.com/uploads/contests/H20_techart_challenge/assets/utility_03_gsops.zip). **Some features may be missing compared to this repo.**
+* [Click here to download a Commercial license snapshop of GSOPs 1.0](https://media.sidefx.com/uploads/contests/H20_techart_challenge/assets/utility_03_gsops.zip). **Some features may be missing compared to this repo.**
 * Please adhere to the [SideFX Houdini License Agreement](https://www.sidefx.com/legal/license-agreement/).
 * GSOPs can generate gaussian splat training data, but it cannot train models. If you want to train models locally, please see [3D Gaussian Splatting for Real-Time Radiance Field Rendering](https://github.com/graphdeco-inria/gaussian-splatting) or [Postshot](https://www.jawset.com/).
 * If you're interested in what you've seen and would like to discuss innovation/R&D collaboration opportunities, please contact us.
