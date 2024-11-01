@@ -61,7 +61,7 @@ For more information regarding any of the following nodes, please reference the 
     * **Either clone with `--recurse-submodules`, or run `git submodule init` followed by `git submodule update`**. 
     * If you have separately installed [houdini-gsplat-renderer](https://github.com/rubendhz/houdini-gsplat-renderer), **it is recommneded to delete existing compiled binaries to avoid plug-in conflicts!**
 2. Copy the `packages` directory found in the repository root, and paste it in the $HOUDINI_USER_PREF_DIR folder. [More information here.](https://www.sidefx.com/docs/houdini/ref/plugins.html)
-3. Open the GSOPs_20.5.json file inside the `packages` directory you just pasted. Modify the $GSOPS path found inside to the the location used in step one.
+3. Open the GSOPs_20.5.json file inside the `packages` directory you just pasted. Modify the "GSOPS" path found inside to the the location used in step one.
 4. Install the latest [SideFX Labs](https://www.sidefx.com/products/sidefx-labs/) release. 
 
 ## Getting Started
