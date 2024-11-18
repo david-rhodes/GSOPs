@@ -13,7 +13,7 @@ For more examples of GSOPs in action, check out [GSOPs on LinkedIn](https://www.
 
 **🥉 GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/).**
 
-[Join us on Discord!](https://discord.gg/mUTWa4Kv)
+[Join us on Discord!](https://discord.gg/bwsvvRYNJa)
 
 ## Motivation
 Houdini's powerful, data-efficient architecture makes it the go-to platform for procedural content production across many industries. Its flexible and extensible design empowers users to tackle complex challenges at the right level of abstraction, focusing on problem-solving rather than low-level technicalities.
@@ -78,7 +78,7 @@ For more information regarding any of the following nodes, please reference the 
 
 ## Help
 * All digital assets exist in the SOPS context and (most) have their own help card documentation.
-* [Join us on Discord](https://discord.gg/mUTWa4Kv).
+* [Join us on Discord](https://discord.gg/bwsvvRYNJa).
 
 ## Known Issues
 We consider GSOPs to be a professional-grade prototyping toolset. It is not free from error, and the user experience could be improved in many areas. Here are some of the known issues:
@@ -90,7 +90,7 @@ We consider GSOPs to be a professional-grade prototyping toolset. It is not free
 * There's quite a bit of python in the project which needs additional error handling.
    
 ## Contribution Wish List
-We have not yet been able to implement all the cool ideas we have. However, in open-sourcing GSOPs, we hope to involve the community. After all, we're stronger together! Please [join us on Discord](https://discord.gg/mUTWa4Kv)! 
+We have not yet been able to implement all the cool ideas we have. However, in open-sourcing GSOPs, we hope to involve the community. After all, we're stronger together! Please [join us on Discord](https://discord.gg/bwsvvRYNJa)! 
 
 Here's our wish list for community contributions (please feel free to bring your own ideas, too):
 - [x] Viewport Renderer (Thanks, [Ruben](https://github.com/rubendhz)!)
