@@ -1,4 +1,4 @@
-# GSOPs 2.7 (Gaussian Splatting Operators) for SideFX Houdini 20.5
+# GSOPs 2.8 (Gaussian Splatting Operators) for SideFX Houdini 20.5
 
 [Watch the GSOPs 2.5 Sizzle Reel](https://youtu.be/-_gqsi6NYcY)
 
@@ -69,7 +69,8 @@ Activate your license using the GSOPs shelf button.
 1. If you chose not to download sample data during installation, you should do that now via the GSOPs Shelf. 
 2. Open a few example scenes from the `hip` directory. Use these to validate your installation and better understand Gaussian splatting workflows.
 3. For accurate color results, [disable OpenColorIO in the viewport](https://vimeo.com/1001396463). 
-4. Disable viewport lighting and enable smooth shading. The `Gaussian Splats Source` node has a "Set Viewport Settings" button for your convenience.
+4. Disable viewport lighting and enable smooth shading. The `Gaussian Splats Source` node has a "Set Viewport Settings" button for your convenience. If you use this, set gamma in the color correction toolbar to 1.0. This button will also set the viewport renderer to use `OpenGL`, rather than `Vulkan` (required for live viewport compositing, see Edit->Preferences->3D Viewports->Renderer).
+![GSOPs Shelf](/help/images/source_set_viewport_settings.png)
 5. The `Gaussian Splats Source` SOP (i.e., the "render" node) does not currently have an output. This means it must exist at the end of your network.
 
 ## Notes
@@ -86,10 +87,19 @@ Activate your license using the GSOPs shelf button.
 
 GSOPs is packed with features. For more information regarding any of the nodes shown above, please check the [wiki](https://github.com/cgnomads/GSOPs/wiki/GSOPs-Nodes) and reference the built-in help cards.
 
-## [NEW & EARLY ACCESS] Gaussian Splats Enhance
-Add feature attributes to your splats, generate and/or improve normals, and add ambient occlusion.
+## [NEW & EARLY ACCESS] Support for Compressed Splats
+In addition to `.ply`, import `.splat` and `.spz` file formats.
 
-## [NEW & EARLY ACCESS] Gaussian Splats Sharpen
+## [NEW & EARLY ACCESS] Configurable Viewport Renderer
+Unlock "live compositing" (traditional geometry and splats with proper depth sorting), "depth" and "worldPos" render modes.
+
+## [NEW & EARLY ACCESS] Gaussian Splats Histogram
+Plot and edit splats in histogram space based on any floating point attribute. This provides a fun and intuitive way to apply targeted edits to your scene.
+
+## [UPDATED & EARLY ACCESS] Gaussian Splats Enhance
+Add feature attributes to your splats, generate and/or improve normals, and add ambient occlusion and roughness approximations. These attributes can now be used by the `Gaussian Splats Relight IBL` node. 
+
+## [EARLY ACCESS] Gaussian Splats Sharpen
 Sharpen splats using optional mask attribute (e.g., from feature attributes).
 
 ## [EARLY ACCESS] Support for Solaris & Karma
