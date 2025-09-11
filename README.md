@@ -88,7 +88,7 @@ Activate your license using the GSOPs shelf button.
 GSOPs is packed with features. For more information regarding any of the nodes shown above, please check the [wiki](https://github.com/cgnomads/GSOPs/wiki/GSOPs-Nodes) and reference the built-in help cards.
 
 ## [NEW & EARLY ACCESS] Support for Compressed Splats
-In addition to `.ply`, import `.gsplat` and `.spz` file formats.
+In addition to `.ply`, import `.splat` and `.spz` file formats.
 
 ## [NEW & EARLY ACCESS] Configurable Viewport Renderer
 Unlock "live compositing" (traditional geometry and splats with proper depth sorting), "depth" and "worldPos" render modes.
