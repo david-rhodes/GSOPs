@@ -1,8 +1,8 @@
 {
-    "date" : "2025-09-08",
+    "date" : "2026-01-07",
     "popup" : {
-        "title" : "GSOPs 2.8 by CG Nomads",
-        "content" : "Thank you for installing GSOPs, Where Magic Meets Reality.\n\nThis update includes new viewport settings (live compositing with geometry, depth, SH order, max splat count), and Splat Histogram--a fun and intuitive way to perform selective scene edits. We now also support compressed splats in the .splat and .spz formats!\n\nGSOPs is trusted by professional artists and studios worldwide. While we're proud to keep the core experience open source, this is only possible thanks to contributions and commercial licensing. Consider becoming an Early Access member to unlock premium features and support GSOPs' ongoing development in the process.\n\nPlease enjoy!",
+        "title" : "GSOPs 2.9 by CG Nomads",
+        "content" : "Thank you for installing GSOPs, Where Magic Meets Reality.\n\nThis update includes support for Houdini 21 (installer, precompiled binaries, and a node to toggle between Houdini native and GSOPs splat conventions). You can now customize the GSOPs configuration directory (see README for more information). We strongly recommend you run the gsops_installer.hip again.\n\nGSOPs is trusted by professional artists and studios worldwide. While we're proud to keep the core experience open source, this is only possible thanks to contributions and commercial licensing. Consider becoming an Early Access member to unlock premium features and support GSOPs' ongoing development in the process.\n\nPlease enjoy!",
         "buttons" : [
             {
                 "text" : "Visit CG Nomads",

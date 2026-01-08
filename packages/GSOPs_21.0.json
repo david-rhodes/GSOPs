@@ -1,6 +1,6 @@
 {
     "load_package_once": true,
-    "enable": "houdini_version == '20.5'",
+    "enable": "houdini_version == '21.0'",
     "env": 
     [
         { 
@@ -12,9 +12,9 @@
         {
             "GSPLAT_RENDERER": 
             [
-                { "houdini_os == 'windows'" : "$GSOPS/plugin/bin/windows/20.5" },
-                { "houdini_os == 'linux'" : "$GSOPS/plugin/bin/linux/20.5" },
-                { "houdini_os == 'macos'" : "$GSOPS/plugin/bin/macos/20.5" }
+                { "houdini_os == 'windows'" : "$GSOPS/plugin/bin/windows/21.0" },
+                { "houdini_os == 'linux'" : "$GSOPS/plugin/bin/linux/21.0" },
+                { "houdini_os == 'macos'" : "$GSOPS/plugin/bin/macos/21.0" }
             ]
         },
         { 
