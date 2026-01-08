@@ -40,9 +40,7 @@ This unique combination of flexibility and ease of use is especially valuable in
 SideFX, the developer of Houdini, fosters innovation through its "Labs" initiative. This incubator allows for the iteration of new tools and workflows before they become mainstream. Similarly, GSOPs provides a dedicated playground for Novel View Synthesis, enabling users to craft new workflows that closely align with the final visual result while prioritizing a creative and enjoyable process.
 
 ## Support Us
-We're passionate about the potential of editable radiance fields in SideFX Houdini and we're eager to continue pushing boundaries. If you believe in this initiative or have benefitted from GSOPs, please consider becoming an Early Access supporter. 
-
-As a token of our appreciation, you'll gain access to [exclusive content](https://github.com/cgnomads/GSOPs/wiki/Early-Access-Content) and new features.
+We're passionate about the potential of editable radiance fields in SideFX Houdini and we're eager to continue pushing boundaries. If you believe in this initiative or have benefitted from GSOPs, please consider donating. 
 
 <a href="https://www.buymeacoffee.com/gsopsproject"><img src="help/images/support_gsops.png" alt="Support GSOPs" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
 
@@ -60,7 +58,7 @@ Clone this repository (use the `develop` branch for the latest and greatest).
 2. The installer will ask if you want to download sample data. Select "Yes" if you're interested in exploring our example content (recommended).
 ### Manual
 1. Copy the `packages` directory from the cloned repo location to your Houdini user preferences directory. 
-2. For each version of Houdini you want to use with GSOPs, change the "GSOPS" environment variable in the `.json` to your GSOPs clone location. (e.g., in `GSOPs_20.5.json` or `GSOPs_20.1.json`). 
+2. For each version of Houdini you want to use with GSOPs, change the "GSOPS" environment variable in the `.json` to your GSOPs clone location (e.g., `GSOPs_20.5.json` or `GSOPs_21.0.json`). 
 3. [Optional] Change the `GSOPS_USER_DATA_DIR` value as you see fit. This is where GSOPS configuration data will be stored--it needs to be a writeable location!
 4. [Optional] Download sample data using the GSOPs shelf button.
 
@@ -79,7 +77,7 @@ Activate your license using the GSOPs shelf button.
 
 ## Notes
 * Please be kind. We love innovating and learning, and we want you to benefit from this project.
-* GSOPs is only supported for Houdini 20.5. 
+* GSOPs is only supported for Houdini 20.5 and 21.0. 
 * Linux is not officially supported.
 * Please adhere to the [SideFX Houdini License Agreement](https://www.sidefx.com/legal/license-agreement/).
 * GSOPs can generate Gaussian splat training data, but it **cannot** train models. If you want to train models locally, please see [3D Gaussian Splatting for Real-Time Radiance Field Rendering](https://github.com/graphdeco-inria/gaussian-splatting), [Postshot](https://www.jawset.com/), or [Brush](https://github.com/ArthurBrussee/brush) (a great option for Mac users).

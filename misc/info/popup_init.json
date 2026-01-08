@@ -2,7 +2,7 @@
     "date" : "2026-01-08",
     "popup" : {
         "title" : "GSOPs 2.9 by CG Nomads",
-        "content" : "Thank you for installing GSOPs, Where Magic Meets Reality.\n\nThis update includes support for Houdini 21 (installer, precompiled binaries, and a node to toggle between Houdini native and GSOPs splat conventions). You can now customize the GSOPs configuration directory (see README for more information). We strongly recommend you run the gsops_installer.hip again.\n\nGSOPs is trusted by professional artists and studios worldwide. While we're proud to keep the core experience open source, this is only possible thanks to contributions and commercial licensing. Consider becoming an Early Access member to unlock premium features and support GSOPs' ongoing development in the process.\n\nPlease enjoy!",
+        "content" : "Thank you for installing GSOPs, Where Magic Meets Reality.\n\nThis update includes support for Houdini 21 (installer, precompiled binaries, and a node to toggle between Houdini native and GSOPs splat conventions). You can now customize the GSOPs configuration directory (see README for more information). We strongly recommend you run the gsops_installer.hip again.\n\nGSOPs is trusted by professional artists and studios worldwide. While we're proud to keep the core experience open source, this is only possible thanks to contributions and commercial licensing.\n\nPlease enjoy!",
         "buttons" : [
             {
                 "text" : "Visit CG Nomads",
