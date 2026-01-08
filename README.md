@@ -1,6 +1,6 @@
-# GSOPs 2.8 (Gaussian Splatting Operators) for SideFX Houdini 20.5
+# GSOPs 2.9 (Gaussian Splatting Operators) for SideFX Houdini 20.5 and 21.0
 
-[Watch the GSOPs 2.5 Sizzle Reel](https://youtu.be/-_gqsi6NYcY)
+[Watch the GSOPs Sizzle Reel](https://youtu.be/-_gqsi6NYcY)
 
 [Watch the GSOPs Showcase](https://youtu.be/XZUUATb1u28)
 
@@ -50,15 +50,19 @@ As a token of our appreciation, you'll gain access to [exclusive content](https:
 Need support, private modifications, or commercial usage? Custom site licenses tailored to your studio’s needs are available upon request. Contact us at gsops.project@gmail.com for more information.
 
 ## Installation
-1. Clone this repository (use the `develop` branch for the latest and greatest).
-    * **[Using Git CLI]** `git clone https://github.com/cgnomads/GSOPs`
-    * **[Using [GitHub Desktop](https://desktop.github.com/download/)]** Clone repository with URL: `https://github.com/cgnomads/GSOPs.git`
-2. Install and configure the GSOPs Houdini package by opening the `hip/gsops_installer.hip` file in Houdini, selecting the `INSTALL_GSOPS` node and clicking `INSTALL`.
+Clone this repository (use the `develop` branch for the latest and greatest).
+* **[Using Git CLI]** `git clone https://github.com/cgnomads/GSOPs`
+* **[Using [GitHub Desktop](https://desktop.github.com/download/)]** Clone repository with URL: `https://github.com/cgnomads/GSOPs.git`
+### Automatic
+1. Install and configure the GSOPs Houdini package by opening the `hip/gsops_installer.hip` file in Houdini, selecting the `INSTALL_GSOPS` node and clicking `INSTALL`.
    
     <img width="548" alt="419229706-0c526dae-0ed9-4ab0-b986-9924f29c1481" src="https://github.com/user-attachments/assets/a0a08d0a-f6ea-491b-9419-a2e9e0fc706b" />
-    
-3. The installer will ask if you want to download sample data. Select "Yes" if you're interested in exploring our example content (recommended).
-4. **[Optional]** Install the latest SideFX Labs release.
+2. The installer will ask if you want to download sample data. Select "Yes" if you're interested in exploring our example content (recommended).
+### Manual
+1. Copy the `packages` directory from the cloned repo location to your Houdini user preferences directory. 
+2. For each version of Houdini you want to use with GSOPs, change the "GSOPS" environment variable in the `.json` to your GSOPs clone location. (e.g., in `GSOPs_20.5.json` or `GSOPs_20.1.json`). 
+3. [Optional] Change the `GSOPS_USER_DATA_DIR` value as you see fit. This is where GSOPS configuration data will be stored--it needs to be a writeable location!
+4. [Optional] Download sample data using the GSOPs shelf button.
 
 ### Early Access Supporters
 Activate your license using the GSOPs shelf button.    
@@ -87,16 +91,19 @@ Activate your license using the GSOPs shelf button.
 
 GSOPs is packed with features. For more information regarding any of the nodes shown above, please check the [wiki](https://github.com/cgnomads/GSOPs/wiki/GSOPs-Nodes) and reference the built-in help cards.
 
-## [NEW & EARLY ACCESS] Support for Compressed Splats
+## [NEW] Houdini 21 Native Gaussian Splatting Interoperability
+Houdini 21 has native Gaussian Splatting, but SideFX uses different attribute data conventions. Use the `Gaussian Splats Convert` SOP to convert between GSOPs and Houdini's native conventions. 
+
+## [EARLY ACCESS] Support for Compressed Splats
 In addition to `.ply`, import `.splat` and `.spz` file formats.
 
-## [NEW & EARLY ACCESS] Configurable Viewport Renderer
+## [EARLY ACCESS] Configurable Viewport Renderer
 Unlock "live compositing" (traditional geometry and splats with proper depth sorting), "depth" and "worldPos" render modes.
 
-## [NEW & EARLY ACCESS] Gaussian Splats Histogram
+## [EARLY ACCESS] Gaussian Splats Histogram
 Plot and edit splats in histogram space based on any floating point attribute. This provides a fun and intuitive way to apply targeted edits to your scene.
 
-## [UPDATED & EARLY ACCESS] Gaussian Splats Enhance
+## [EARLY ACCESS] Gaussian Splats Enhance
 Add feature attributes to your splats, generate and/or improve normals, and add ambient occlusion and roughness approximations. These attributes can now be used by the `Gaussian Splats Relight IBL` node. 
 
 ## [EARLY ACCESS] Gaussian Splats Sharpen
@@ -112,13 +119,13 @@ Mirror your splats while preserving proper view dependent effects (spherical har
 The `Gaussian Splats Import` SOP now accepts [2DGS](https://github.com/hbb1/2d-gaussian-splatting) models!
 
 ## Coarse Meshing
-GSOPs 2.5 introduces dependency-free coarse meshing for 3D Gaussian Splatting. Coarse meshes are an effective "sparse node graph" for splat editing operations.
+GSOPs 2.5 introduced dependency-free coarse meshing for 3D Gaussian Splatting. Coarse meshes are an effective "sparse node graph" for splat editing operations.
 
 * [Coarse Meshing Utilities](https://github.com/cgnomads/GSOPs/wiki/GSOPs-Nodes#coarse-meshing)
 * [Coarse Meshing Guidelines](https://github.com/cgnomads/GSOPs/wiki/Coarse-Meshing-Guidelines)
 
 ## Splat Animation Sequences
-* It's possible to create, import, edit, and export splat animation sequences (one .ply per file). You can load and render these in [Postshot](https://www.jawset.com/), [SuperSplat](https://playcanvas.com/supersplat/editor/), [Brush](https://github.com/ArthurBrussee/brush), and [Unity](https://github.com/cgnomads/GSOPs/blob/develop/extra/UnityGaussianSplatting/INSTRUCTIONS.md).
+* It's possible to create, import, edit, and export splat animation sequences (one .ply per file). You can load and render these in [Postshot](https://www.jawset.com/), [SuperSplat](https://playcanvas.com/supersplat/editor/), [Brush](https://github.com/ArthurBrussee/brush), and [Unity](https://github.com/cgnomads/GSOPs/blob/develop/extra/unity/UnityGaussianSplatting/INSTRUCTIONS.md).
 
 ## Synthetic Training Data
 * You can use Houdini renders from procedural and manually generated camera poses (in COLMAP format) to convert your CG scenes to 3D Gaussian Splats. The `generate_training_data` SOP supports PNG image output, which enables the trainining of alpha-masked 3DGS models, which produces cleaner reconstructions.

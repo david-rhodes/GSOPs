@@ -60,7 +60,10 @@ webbrowser.open(url)]]></script>
 
   <tool name="install_license_key" label="Install License Key" icon="SOP_cache">
     <script scriptType="python"><![CDATA[import hou
-from PySide2 import QtWidgets, QtCore
+try:
+    from PySide2 import QtWidgets, QtCore
+except ImportError:
+    from PySide6 import QtWidgets, QtCore
 from pathlib import Path
 
 import gsops.authentication as gsops_auth 
@@ -133,7 +136,10 @@ else:
 import json
 
 from pathlib import Path
-from PySide2 import QtWidgets, QtCore
+try:
+    from PySide2 import QtWidgets, QtCore
+except ImportError:
+    from PySide6 import QtWidgets, QtCore
 
 from gsops.authentication import authentication_level
 from gsops.settings import save_settings, load_settings, apply_settings

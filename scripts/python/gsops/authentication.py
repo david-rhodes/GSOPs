@@ -1,4 +1,5 @@
 import hou
+import os
 import inspect
 import json
 from pathlib import Path
@@ -6,8 +7,10 @@ from pathlib import Path
 from gsops.settings import apply_settings
 
 GSOPS_PATH = hou.text.expandString("$GSOPS") or str(Path(inspect.getfile(inspect.currentframe())).parent.parent)
-GSOPS_LICENSE_FILE_PATH = f"{GSOPS_PATH}/.gsops/license"
-GSOPS_CONFIG_FILE_PATH = f"{GSOPS_PATH}/.gsops/config.json"
+
+GSOPS_STATE_DIR = hou.text.expandString("$GSOPS_USER_DATA_DIR") or os.path.join(GSOPS_PATH, ".gsops")
+GSOPS_LICENSE_FILE_PATH = f"{GSOPS_STATE_DIR}/license"
+GSOPS_CONFIG_FILE_PATH = f"{GSOPS_STATE_DIR}/config.json"
 
 
 def retrieve_installed_license_details():
