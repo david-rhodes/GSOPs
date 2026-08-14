@@ -2,7 +2,7 @@
     "date" : "2026-08-13",
     "popup" : {
         "title" : "GSOPs 3.0 by CG Nomads",
-        "content" : "Welcome to GSOPs 3.0: Where Magic Meets Reality.\n\nThis release brings support for Houdini 22 and adds several new features: mip-splatting, ML-Sharp compatibility, Slat Bake and Splat Reduce (courtesy of Bailey Tsang and Eyeline). Additionally Splat Light Emitter and Splat Relight are in Early Access! Don't forget to check out the example scenes!\n\nThank you to our contributors, supporters and Studio Licensees for making this release possible!",
+        "content" : "GSOPs 3.0 is here: Where Magic Meets Reality.\n\nThis release brings support for Houdini 22 and adds several new features: mip-splatting, ML-Sharp compatibility, Slat Bake and Splat Reduce (courtesy of Bailey Tsang and Eyeline). Additionally Splat Light Emitter and Splat Relight are in Early Access! Don't forget to check out the example scenes! NOTE: you need to install the update manually.\n\nThank you to our contributors, supporters and Studio Licensees for making this release possible!",
         "buttons" : [
             {
                 "text" : "Visit CG Nomads",
