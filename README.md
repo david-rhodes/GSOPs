@@ -30,7 +30,7 @@ GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.side
 - [Superman](https://www.youtube.com/watch?v=Pxd-q3ECBPs) (Framestore, 2025)
 - [Dune: Prophecy](https://radiancefields.com/inside-rodeo-fx-s-use-of-gaussian-splatting-for-hbo-s-dune-prophecy) (Rodeo FX, 2025)
 - A$AP Rocky's [HELICOPTER](https://www.youtube.com/watch?v=g1-46Nu3HxQ) (Grin Machine, 2026)
-- [XA XÔI - MCK ft. OBITO](https://www.youtube.com/watch?v=NSkimwwZBRs) (Antiantiart, 2026)
+- [XA XÔI - MCK ft. OBITO](https://youtu.be/qKGH0Pti46o?si=8iljosoOLY62eiSs) (Antiantiart, 2026)
 - Death by Romy's [XR Concert](https://www.youtube.com/watch?v=j_I7ypiZGvM) (Prism AI, 2026)
 
 ## Where Magic Meets Reality
