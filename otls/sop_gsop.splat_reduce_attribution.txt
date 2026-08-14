@@ -1,0 +1,7 @@
+Gaussian Splats Reduce was developed from scratch by Bailey Tsang (https://www.linkedin.com/in/baileytsang/) and Eyeline (https://www.eyelinestudios.com).
+
+This is an independent implementation inspired by NanoGS: Training-Free Gaussian Splat Simplification by Butian Xiong, Rong Liu, Tiantian Zhou, Meida Chen, Zhiwen Fan, and Andrew Feng.
+NanoGS Project Page: https://saliteta.github.io/NanoGS/.
+NanoGS Web App: https://rongliu-leo.github.io/NanoGS/
+
+Huge thanks to the authors!
