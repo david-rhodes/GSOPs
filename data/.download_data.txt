@@ -1,4 +1,5 @@
 fonts/Spartan-Light.ttf https://drive.google.com/uc?id=1UMweys9kW3hLRp8n5H7oWYd-61zOd9MH&export=download
+gsplats/sharp/captured/samoyed.ply https://drive.google.com/uc?id=1KYFZuuZw-Cz3ul4LlfP99kCHWDuWYXRE&export=download
 gsplats/2dgs/captured/bonsai/bonsai.ply https://drive.google.com/uc?id=1UaHNhagMm7oY3fjBt23tekCHKS_KdigP&export=download
 gsplats/3dgs/captured/bb8/cleaned/bb8_normals.ply https://drive.google.com/uc?id=1t6ceXobU5b1q-PB2Wv8-f9wpJH-We2N3&export=download
 gsplats/3dgs/captured/bb8/bb8.meta.json https://drive.google.com/uc?id=1uTeEhm8oIyY0SlwS6SXCn2oTjq5P5Lsr&export=download

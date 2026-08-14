@@ -1,17 +1,37 @@
-# GSOPs 2.9 (Gaussian Splatting Operators) for SideFX Houdini 20.5 and 21.0
+# GSOPs: Where Magic Meets Reality
+### Gaussian Splatting Operators for SideFX Houdini
 
-[Watch the GSOPs Sizzle Reel](https://youtu.be/-_gqsi6NYcY)
+[![GSOPs: Where Magic Meets Reality](/help/images/where_magic_meets_reality.jpg)](https://www.youtube.com/watch?v=d4F1cmAA_Ds)
 
-[Watch the GSOPs Showcase](https://youtu.be/XZUUATb1u28)
+[Sizzle Reel](https://youtu.be/-_gqsi6NYcY) | [Showcase](https://youtu.be/XZUUATb1u28)
 
-[How to Install](https://github.com/cgnomads/GSOPs?tab=readme-ov-file#installation)
+## New in GSOPs 3.0
+GSOPs 3.0 brings several new features and improvements. See the complete release notes [here](https://github.com/cgnomads/GSOPs/releases/tag/v3.0.0).
 
-[![GSOPs Showcase Video](help/images/gsops_pig.gif)](https://www.youtube.com/watch?v=5V7mBuVxlt4)
+- Support for Houdini 22!
+- Mip-splatting: Support for models trained with [mip-splatting](https://github.com/autonomousvision/mip-splatting) (antialiasing). Thanks to [Forian Hahlbohm](https://www.linkedin.com/in/florian-hahlbohm-a36b2b24a/) for his assistance!
+- ML-Sharp: Import splats and generate cameras from Apple's [Sharp Monocular View Synthesis in Less Than a Second](https://github.com/apple/ml-sharp).
+- `Gaussian Splats Bake`: Bake Gaussian splats to points, mesh, and density volumes. Great for voxelizing splats, converting to colored meshes, and simulating volumes.
+- `Gaussian Splats Reduce`: Developed by [Bailey Tsang](https://www.linkedin.com/in/baileytsang/) and [Eyeline](https://eyelinestudios.com/), this [NanoGS](https://saliteta.github.io/NanoGS/)-inspired tool intelligently decimates Gaussian splat models. 
+- `Gaussian Splats Relight IBL (3.0)`: Output irradiance (light emitting) and environment splats for compatibility with `Gaussian Splats Relight`.
+- **[EARLY ACCESS]** `Gaussian Splats Relight`: Relight your splats with . . . splats!
+- **[EARLY ACCESS]** `Gaussian Splats Light Emitter`: Turn splats into light emitters for `Gaussian Splats Relight`.
 
-## Upgrade Guide for Existing Users
-**Our licensing options have changed.** [Learn more](https://www.cgnomads.com/licensing).
+Additionally, the following [Early Access](https://github.com/cgnomads/GSOPs/wiki/Early-Access-Content) features have been promoted to the free tier:
 
-As a part of our transition to [CG Nomads](http://www.cgnomads.com), we have removed the renderer submodule dependency and decoupled example data from the repository to reduce its size, improve maintainability, and streamline installation. Therefore, we recommend you perform a fresh clone and follow the [installation instructions](https://github.com/cgnomads/GSOPs?tab=readme-ov-file#installation) as normal.
+- `Gaussian Splats Mirror`: Mirror Gaussian splats while preserving view-dependent effects (spherical harmonics).
+- `Gaussian Splats Histogram`: Plot and edit splats in histogram space based on any floating point attribute (great for targeted adjustments and cleanup).
+- `Gaussian Splats Sharpen`: Sharpen any Gaussian splat attribute, masked by any attribute.
+- Viewport Renderer: Depth and World Position render modes.
+
+## Recognition & Adoption
+GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/) and has since been used for the following projects:
+
+- [Superman](https://www.youtube.com/watch?v=Pxd-q3ECBPs) (Framestore, 2025)
+- [Dune: Prophecy](https://radiancefields.com/inside-rodeo-fx-s-use-of-gaussian-splatting-for-hbo-s-dune-prophecy) (Rodeo FX, 2025)
+- A$AP Rocky's [HELICOPTER](https://www.youtube.com/watch?v=g1-46Nu3HxQ) (Grin Machine, 2026)
+- [XA XÔI - MCK ft. OBITO](https://youtu.be/qKGH0Pti46o?si=8iljosoOLY62eiSs) (Antiantiart, 2026)
+- Death by Romy's [XR Concert](https://www.youtube.com/watch?v=j_I7ypiZGvM) (Prism AI, 2026)
 
 ## Where Magic Meets Reality
 Add ✨ to your Gaussian splatting scenes with GSOPs — the most versatile Gaussian Splats editing toolset!
@@ -22,11 +42,9 @@ GSOPs includes a real-time viewport renderer, [example files](https://github.com
 
 Among its many capabilities, GSOPs is effective at isolating objects, eliminating noise and "floaters", deforming and animating splat models, composing scenes, meshing and relighting, performing feature analysis, and generating synthetic training data capable of delivering high-fidelity results with complex view-dependent effects.
 
-Developed by [David Rhodes](https://www.linkedin.com/in/davidarhodes/) and [Ruben Diaz](https://www.linkedin.com/in/rubendz/), GSOPs is now hosted under [CG Nomads](http://www.cgnomads.com).
+Developed by [David Rhodes](https://www.linkedin.com/in/davidarhodes/) and [Ruben Diaz](https://www.linkedin.com/in/rubendz/), GSOPs is hosted under [CG Nomads](http://www.cgnomads.com).
 
 Check out GSOPs on [LinkedIn](https://www.linkedin.com/feed/hashtag/?keywords=gsops) and [YouTube](https://www.youtube.com/playlist?list=PLh6-L_XjgKCv7PwEivhQJqEOCfqiY6pKg) for more examples.
-
-🥉 GSOPs won 3rd place in the [H20 SIDEFX LABS Tech Art Challenge](https://www.sidefx.com/community-main-menu/contests-jams/h20-tech-art-challenge/).
 
 💬 [Join us on Discord!](https://discord.gg/bwsvvRYNJa)
 
@@ -39,13 +57,28 @@ This unique combination of flexibility and ease of use is especially valuable in
 
 SideFX, the developer of Houdini, fosters innovation through its "Labs" initiative. This incubator allows for the iteration of new tools and workflows before they become mainstream. Similarly, GSOPs provides a dedicated playground for Novel View Synthesis, enabling users to craft new workflows that closely align with the final visual result while prioritizing a creative and enjoyable process.
 
-## Support Us
-We're passionate about the potential of editable radiance fields in SideFX Houdini and we're eager to continue pushing boundaries. If you believe in this initiative or have benefitted from GSOPs, please consider donating. 
+## Licensing
+GSOPs began as free and open source software. As radiance field technologies evolve and gain traction across industries, we’re seeing increased demand for tools that empower artists, workflows that reduce iteration time, and pipelines that scale with production. GSOPs is our answer. 
+
+Visit [cgnomads.com/licensing](https://www.cgnomads.com/licensing) or contact us at gsops.project@gmail.com for more information.
+
+### Studios
+Custom site licenses tailored to your studio’s needs. Support, source code, commercial usage, and Linux builds. 
+
+### Schools
+Free access for educators interested in incorporating GSOPs as part of their curriculum. 
+
+Inagural Partners:
+- [Stuttgart Media University](https://hdm-stuttgart.de/en/)
+- [USC Ganek Immersive Studio](https://ganekimmersivestudio.com/)
+- [UTS Animal Logic Academy](https://www.uts.edu.au/about/faculties/design-and-society/animal-logic-academy)
+
+### Indies & Early Access
+Get [Early Access](https://github.com/cgnomads/GSOPs/wiki/Early-Access-Content) to new GSOPs features and a "Supporter" Discord role. This is a great way to show your support and contribute to new feature development. 
+
+We're passionate about the potential of editable radiance fields in SideFX Houdini and we're eager to continue pushing boundaries. If you believe in this initiative or have benefitted from GSOPs, please consider purchasing a license or making a donation. 
 
 <a href="https://www.buymeacoffee.com/gsopsproject"><img src="help/images/support_gsops.png" alt="Support GSOPs" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
-
-## Studio Licenses
-Need support, private modifications, or commercial usage? Custom site licenses tailored to your studio’s needs are available upon request. Contact us at gsops.project@gmail.com for more information.
 
 ## Installation
 Clone this repository (use the `develop` branch for the latest and greatest).
@@ -58,7 +91,7 @@ Clone this repository (use the `develop` branch for the latest and greatest).
 2. The installer will ask if you want to download sample data. Select "Yes" if you're interested in exploring our example content (recommended).
 ### Manual
 1. Copy the `packages` directory from the cloned repo location to your Houdini user preferences directory. 
-2. For each version of Houdini you want to use with GSOPs, change the "GSOPS" environment variable in the `.json` to your GSOPs clone location (e.g., `GSOPs_20.5.json` or `GSOPs_21.0.json`). 
+2. For each version of Houdini you want to use with GSOPs, change the "GSOPS" environment variable in the `.json` to your GSOPs clone location (e.g., `GSOPs_20.5.json`, `GSOPs_21.0.json`, or `GSOPs_22.0.json`). 
 3. [Optional] Change the `GSOPS_USER_DATA_DIR` value as you see fit. This is where GSOPS configuration data will be stored--it needs to be a writeable location!
 4. [Optional] Download sample data using the GSOPs shelf button.
 
@@ -70,71 +103,52 @@ Activate your license using the GSOPs shelf button.
 ## Getting Started
 1. If you chose not to download sample data during installation, you should do that now via the GSOPs Shelf. 
 2. Open a few example scenes from the `hip` directory. Use these to validate your installation and better understand Gaussian splatting workflows.
-3. For accurate color results, [disable OpenColorIO in the viewport](https://vimeo.com/1001396463). 
-4. Disable viewport lighting and enable smooth shading. The `Gaussian Splats Source` node has a "Set Viewport Settings" button for your convenience. If you use this, set gamma in the color correction toolbar to 1.0. This button will also set the viewport renderer to use `OpenGL`, rather than `Vulkan` (required for live viewport compositing, see Edit->Preferences->3D Viewports->Renderer).
-![GSOPs Shelf](/help/images/source_set_viewport_settings.png)
-5. The `Gaussian Splats Source` SOP (i.e., the "render" node) does not currently have an output. This means it must exist at the end of your network.
+3. For the best experience, [disable OpenColorIO](https://vimeo.com/1001396463) and enable smooth shading in the viewport.
+4. The `Gaussian Splats Source` SOP (i.e., the "render" node) does not currently have an output. This means it must exist at the end of your network.
 
 ## Notes
 * Please be kind. We love innovating and learning, and we want you to benefit from this project.
-* GSOPs is only supported for Houdini 20.5 and 21.0. 
-* Linux is not officially supported.
+* GSOPs is supported for Houdini 20.5 through Houdini 22.0. 
+* Precompiled binaries are not available for Linux. See our [licensing options](https://www.cgnomads.com/licensing) for Studio Linux support. 
 * Please adhere to the [SideFX Houdini License Agreement](https://www.sidefx.com/legal/license-agreement/).
-* GSOPs can generate Gaussian splat training data, but it **cannot** train models. If you want to train models locally, please see [3D Gaussian Splatting for Real-Time Radiance Field Rendering](https://github.com/graphdeco-inria/gaussian-splatting), [Postshot](https://www.jawset.com/), or [Brush](https://github.com/ArthurBrussee/brush) (a great option for Mac users).
+* GSOPs can generate Gaussian splat training data, but it **cannot** train models. If you want to train models locally, please see [Lichtfeld Studio](https://lichtfeld.io/), [Postshot](https://www.jawset.com/), or [Brush](https://github.com/ArthurBrussee/brush) (a great option for Mac users).
 * If you're interested in what you've seen and would like to discuss innovation/R&D collaboration opportunities, please [contact us](https://www.cgnomads.com/about-us).
 * GSOPs is developed in our personal time and is provided as-is. 
 
-## GSOPs Nodes
+## Features
+
+### Digital Assets (Nodes)
 <img src="/help/images/gsops_nodes.png" alt="drawing" width="300"/>
 
-GSOPs is packed with features. For more information regarding any of the nodes shown above, please check the [wiki](https://github.com/cgnomads/GSOPs/wiki/GSOPs-Nodes) and reference the built-in help cards.
+### Houdini 21+ Native Gaussian Splatting Interoperability
+Houdini 21+ provides native Gaussian Splatting, but SideFX uses different attribute data conventions. Use the `Gaussian Splats Convert` SOP to toggle between GSOPs and Houdini's native conventions. 
 
-## [NEW] Houdini 21 Native Gaussian Splatting Interoperability
-Houdini 21 has native Gaussian Splatting, but SideFX uses different attribute data conventions. Use the `Gaussian Splats Convert` SOP to convert between GSOPs and Houdini's native conventions. 
-
-## [EARLY ACCESS] Support for Compressed Splats
-In addition to `.ply`, import `.splat` and `.spz` file formats.
-
-## [EARLY ACCESS] Configurable Viewport Renderer
-Unlock "live compositing" (traditional geometry and splats with proper depth sorting), "depth" and "worldPos" render modes.
-
-## [EARLY ACCESS] Gaussian Splats Histogram
-Plot and edit splats in histogram space based on any floating point attribute. This provides a fun and intuitive way to apply targeted edits to your scene.
-
-## [EARLY ACCESS] Gaussian Splats Enhance
-Add feature attributes to your splats, generate and/or improve normals, and add ambient occlusion and roughness approximations. These attributes can now be used by the `Gaussian Splats Relight IBL` node. 
-
-## [EARLY ACCESS] Gaussian Splats Sharpen
-Sharpen splats using optional mask attribute (e.g., from feature attributes).
-
-## [EARLY ACCESS] Support for Solaris & Karma
-We now provide a `Gaussian Splats Import` LOP node to simplify rendering and relighting Splats in Solaris. Additionally, the `Gaussian Splats Evaluate Spherical Harmonics` has been updated to bake spherical harmonics to the color attribute (`v@Cd`) for raytracing. Check out the `solaris.hip` example to learn more.
-
-## [EARLY ACCESS] Gaussian Splats Mirror
-Mirror your splats while preserving proper view dependent effects (spherical harmonics).
-
-## Support for 2DGS
-The `Gaussian Splats Import` SOP now accepts [2DGS](https://github.com/hbb1/2d-gaussian-splatting) models!
-
-## Coarse Meshing
-GSOPs 2.5 introduced dependency-free coarse meshing for 3D Gaussian Splatting. Coarse meshes are an effective "sparse node graph" for splat editing operations.
+### Coarse Meshing
+GSOPs offers dependency-free coarse meshing for 3D Gaussian Splatting. Coarse meshes are an effective "sparse node graph" for splat editing operations. 
 
 * [Coarse Meshing Utilities](https://github.com/cgnomads/GSOPs/wiki/GSOPs-Nodes#coarse-meshing)
 * [Coarse Meshing Guidelines](https://github.com/cgnomads/GSOPs/wiki/Coarse-Meshing-Guidelines)
 
-## Splat Animation Sequences
-* It's possible to create, import, edit, and export splat animation sequences (one .ply per file). You can load and render these in [Postshot](https://www.jawset.com/), [SuperSplat](https://playcanvas.com/supersplat/editor/), [Brush](https://github.com/ArthurBrussee/brush), and [Unity](https://github.com/cgnomads/GSOPs/blob/develop/extra/unity/UnityGaussianSplatting/INSTRUCTIONS.md).
+### Splat Animation Sequences
+It's possible to create, import, edit, and export splat animation sequences (one .ply per file). You can load and render these in [Lichtfeld Studio](https://lichtfeld.io/), [Postshot](https://www.jawset.com/), [SuperSplat](https://playcanvas.com/supersplat/editor/), [Brush](https://github.com/ArthurBrussee/brush), and [Unity](https://github.com/cgnomads/GSOPs/blob/develop/extra/unity/UnityGaussianSplatting/INSTRUCTIONS.md).
 
-## Synthetic Training Data
+### Synthetic Training Data
 * You can use Houdini renders from procedural and manually generated camera poses (in COLMAP format) to convert your CG scenes to 3D Gaussian Splats. The `generate_training_data` SOP supports PNG image output, which enables the trainining of alpha-masked 3DGS models, which produces cleaner reconstructions.
 * The `gaussian_splats_generate_training_data` SOP was updated in GSOPs 2.5 to support rendering in Karma and other 3rd party renderers. Previously, the render camera was constrained via Python, which caused evaluation issues in other Houdini contexts. The render camera is now constrained via channel expressions, avoiding this race condition. 
 
+### Support for 2DGS
+The `Gaussian Splats Import` SOP also accepts [2DGS](https://github.com/hbb1/2d-gaussian-splatting) models!
+
+### [EARLY ACCESS] Support for Compressed Splats
+In addition to `.ply`, import `.splat` and `.spz` file formats.
+
 ## Help
-* Most digital assets exist in the SOPS context and (most) have their own help card documentation.
+* Most digital assets exist in the SOPS context and (most) have their own help card documentation and parameter tooltips.
+* Check the [wiki](https://github.com/cgnomads/GSOPs/wiki/GSOPs-Nodes).
 * [Join us on Discord](https://discord.gg/bwsvvRYNJa).
 
 ## Acknowledgements
-Thank you, community! Your support, interest, and rapid contributions to Gaussian splatting have inspired and motivated us.
+Supporters and Studio Licensees, thank you for your support! GSOPs 3.0 is dedicated to you!
 
 ### From David
 [Jonne Geven](https://www.linkedin.com/in/jonne-geven/) and [Antti Veräjänkorva](https://www.linkedin.com/in/anttiv79/) have been my "rubber ducks." Thanks, guys. Always helpful to have cool people to bounce ideas around with.
@@ -153,6 +167,6 @@ I wouldn't have gotten this far without the inspiration from so many incredible 
 ## Final Thoughts
 This project is licensed under a _copyleft_ AGPL-3.0 license. If you require a different arrangement, please contact us to discuss alternatives.
 
-Also, if you create something cool and share it on social media, we'd love to see. Please consider tagging us!
+If you create something cool and share it on social media, we'd love to see. Please consider tagging us!
 
 **Keep splatting!** 

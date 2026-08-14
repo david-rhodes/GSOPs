@@ -1,0 +1,32 @@
+{
+    "load_package_once": true,
+    "enable": "houdini_version == '22.0'",
+    "env": 
+    [
+        { 
+            "GSOPS": "D:/GSOPs" 
+        },
+        {
+            "GSOPS_VERSION": "3.0.0"
+        },
+        {
+            "GSPLAT_RENDERER": 
+            [
+                { "houdini_os == 'windows'" : "$GSOPS/plugin/bin/windows/22.0" },
+                { "houdini_os == 'linux'" : "$GSOPS/plugin/bin/linux/22.0" },
+                { "houdini_os == 'macos'" : "$GSOPS/plugin/bin/macos/22.0" }
+            ]
+        },
+        { 
+            "GSOPS_USER_DATA_DIR" : "$GSOPS/.gsops"
+        },
+        {
+            "GSOPS_USE_VERBOSE_LOGGING" : "1"
+        }
+    ],
+    "hpath": 
+    [ 
+        "$GSOPS",
+        "$GSPLAT_RENDERER"
+    ]
+}

@@ -1,8 +1,8 @@
 {
-    "date" : "2026-01-08",
+    "date" : "2026-08-13",
     "popup" : {
-        "title" : "GSOPs 2.9 by CG Nomads",
-        "content" : "Thank you for installing GSOPs, Where Magic Meets Reality.\n\nThis update includes support for Houdini 21 (installer, precompiled binaries, and a node to toggle between Houdini native and GSOPs splat conventions). You can now customize the GSOPs configuration directory (see README for more information). We strongly recommend you pull the latest (if necessary) and run the gsops_installer.hip again.\n\nGSOPs is trusted by professional artists and studios worldwide. While we're proud to keep the core experience open source, this is only possible thanks to contributions and commercial licensing.\n\nPlease enjoy!",
+        "title" : "GSOPs 3.0 by CG Nomads",
+        "content" : "Welcome to GSOPs 3.0: Where Magic Meets Reality.\n\nThis release brings support for Houdini 22 and adds several new features: mip-splatting, ML-Sharp compatibility, Slat Bake and Splat Reduce (courtesy of Bailey Tsang and Eyeline). Additionally Splat Light Emitter and Splat Relight are in Early Access! Don't forget to check out the example scenes!\n\nThank you to our contributors, supporters and Studio Licensees for making this release possible!",
         "buttons" : [
             {
                 "text" : "Visit CG Nomads",
@@ -17,7 +17,7 @@
             {
                 "text" : "Changelog",
                 "action" : "open_url",
-                "url" : "https://github.com/cgnomads/GSOPs/releases/tag/v2.9.0"
+                "url" : "https://github.com/cgnomads/GSOPs/releases/tag/v3.0.0"
             },
             {
                 "text" : "Join Discord Server",
