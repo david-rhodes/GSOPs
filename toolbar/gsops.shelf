@@ -11,6 +11,7 @@
     <memberTool name="join_gsops_discord"/>
     <memberTool name="install_license_key"/>
     <memberTool name="plugin_settings"/>
+    <memberTool name="fix_viewport_bug"/>
   </toolshelf>
 
   <tool name="download_gsops_sample_data" label="Download Sample Data" icon="SOP_file">
@@ -123,11 +124,15 @@ class GSOPsLicenseInstaller(QtWidgets.QDialog):
             hou.ui.displayMessage("Both fields must be filled.", severity=hou.severityType.Warning)
 
 if gsops_auth.authentication_level():
-  hou.ui.displayMessage("Key is already installed.")
+    hou.ui.displayMessage("Key is already installed.")
 else:
-  dialog = GSOPsLicenseInstaller(hou.ui.mainQtWindow())
-  dialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
-  dialog.show()
+    # Safe fallback wrapper for backwards compatibility
+    get_main_window = getattr(hou, "qt", None) and getattr(hou.qt, "mainWindow", None)
+    parent_window = get_main_window() if get_main_window else hou.ui.mainQtWindow()
+
+    dialog = GSOPsLicenseInstaller(parent_window)
+    dialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
+    dialog.show()
 ]]></script>
   </tool>
 
@@ -262,6 +267,8 @@ class GSplatSettingsUI(QtWidgets.QDialog):
         if self.world_range_slider:
             world_range_3dgs = self.world_range_slider.value()
             self.settings_dict["3dgs_world_range"] = world_range_3dgs
+
+        self.settings_dict["3dgs_use_anti_aliasing"] = int(self.use_aa_checkbox.isChecked())
         
         save_settings(self.settings_dict)
 
@@ -286,9 +293,14 @@ class GSplatSettingsUI(QtWidgets.QDialog):
         super(GSplatSettingsUI, self).__init__(parent)
         
         self.settings_dict = load_settings()
-        auth_level = authentication_level()
         
-        render_mode_level_3dgs = self.settings_dict.get("3dgs_render_mode_level", 0)
+        # The real implementation. 
+        #auth_level = authentication_level()
+        
+        # HACK: enable all UI settings, as these features are now in the free tier.
+        auth_level = 1
+
+        render_mode_level_3dgs = 1
         render_mode_settings_enabled = not render_mode_level_3dgs or auth_level >= render_mode_level_3dgs
         render_mode_3dgs = self.settings_dict.get("3dgs_render_mode", 0) if render_mode_settings_enabled else 0
 
@@ -301,7 +313,7 @@ class GSplatSettingsUI(QtWidgets.QDialog):
         # Viewport Render mode dropdown
         #
         self.render_mode_combo = QtWidgets.QComboBox()
-        self.render_mode_combo.addItems(["Color", "Depth", "WorldPos", "Live Compositing"])
+        self.render_mode_combo.addItems(["Color", "Depth", "WorldPos", "Live Compositing (OpenGL only, not compatible with H22)"])
         self.render_mode_combo.setCurrentIndex(render_mode_3dgs)
         render_mode_label = "Render mode:"
         if not render_mode_settings_enabled:
@@ -369,6 +381,15 @@ class GSplatSettingsUI(QtWidgets.QDialog):
         self.gsplat_count_spin.valueChanged.connect(self.update_settings)
         gsplat_count_layout.addWidget(self.gsplat_count_spin)
         self.layout.addLayout(gsplat_count_layout)
+        
+        #
+        # Anti-aliasing toggle
+        #
+        self._add_spacing()
+        self.use_aa_checkbox = QtWidgets.QCheckBox("Use Anti-Aliasing (mip-splatting)")
+        self.use_aa_checkbox.setChecked(bool(self.settings_dict.get("3dgs_use_anti_aliasing", 0)))
+        self.use_aa_checkbox.toggled.connect(self.update_and_apply_settings)
+        self.layout.addWidget(self.use_aa_checkbox)
 
         self.setLayout(self.layout)
 
@@ -380,7 +401,11 @@ def show_gsplat_dialog():
         if isinstance(widget, QtWidgets.QDialog) and widget.windowTitle() == WINDOW_TITLE:
             widget.close()
 
-    dialog = GSplatSettingsUI(hou.ui.mainQtWindow())
+    # Safe fallback wrapper for backwards compatibility
+    get_main_window = getattr(hou, "qt", None) and getattr(hou.qt, "mainWindow", None)
+    parent_window = get_main_window() if get_main_window else hou.ui.mainQtWindow()
+
+    dialog = GSplatSettingsUI(parent_window)
     dialog.setAttribute(QtCore.Qt.WA_DeleteOnClose)
     dialog.show()
 
@@ -389,5 +414,60 @@ show_gsplat_dialog()
 
 
 ]]></script>
+  </tool>
+
+  <tool name="fix_viewport_bug" label="Fix Viewport Bug" icon="hicon:/SVGIcons.index?ENGINE_reset.svg">
+    <script scriptType="python"><![CDATA[import hou
+try:
+    from PySide6 import QtCore
+except ImportError:
+    from PySide2 import QtCore
+
+def refresh_gsops_cache():
+    obj_context = hou.node("/obj")
+    if not obj_context:
+        return
+
+    # Find top-level geo nodes in /obj
+    geo_nodes = [
+        node for node in obj_context.children() 
+        if node.type().name() == "geo"
+    ]
+
+    nodes_to_refresh = []
+
+    for node in geo_nodes:
+        if not node.isDisplayFlagSet():
+            continue
+
+        matching_children = node.recursiveGlob("*", filter=hou.nodeTypeFilter.Sop)
+        has_gs_source = any(
+            "gaussian_splats_source" in child.type().name()
+            for child in matching_children
+        )
+
+        if not has_gs_source:
+            nodes_to_refresh.append(node)
+
+    # 1. Turn display flags OFF
+    for node in nodes_to_refresh:
+        node.setDisplayFlag(False)
+
+    # 2. Deferred function to re-enable display flags
+    def restore_display():
+        for node in nodes_to_refresh:
+            try:
+                # Ensure the node still exists before accessing methods
+                if node and hou.node(node.path()) is not None:
+                    node.setDisplayFlag(True)
+            except hou.ObjectWasDeleted:
+                pass
+                
+        hou.ui.triggerUpdate()
+
+    # 3. Yield execution back to Houdini main thread for 20ms
+    QtCore.QTimer.singleShot(20, restore_display)
+
+refresh_gsops_cache()]]></script>
   </tool>
 </shelfDocument>

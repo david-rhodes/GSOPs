@@ -1,4 +1,3 @@
-# Same as 123.py and 456.py
 import hou
 import importlib.util
 from pathlib import Path
@@ -17,3 +16,5 @@ popup_init_module_spec = importlib.util.spec_from_file_location("popup_init", po
 popup_init = importlib.util.module_from_spec(popup_init_module_spec)
 popup_init_module_spec.loader.exec_module(popup_init)
 popup_init.show()
+
+print("GSOPs has been initialized.")

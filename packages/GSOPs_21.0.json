@@ -7,7 +7,7 @@
             "GSOPS": "D:/GSOPs" 
         },
         {
-            "GSOPS_VERSION": "2.9.0"
+            "GSOPS_VERSION": "3.0.0"
         },
         {
             "GSPLAT_RENDERER": 
@@ -19,6 +19,9 @@
         },
         { 
             "GSOPS_USER_DATA_DIR" : "$GSOPS/.gsops"
+        },
+        {
+            "GSOPS_USE_VERBOSE_LOGGING" : "1"
         }
     ],
     "hpath": 

@@ -1,22 +1,17 @@
 {
     "ophide_levels": {
         "0": {
-            "Sop": [
-                "*gaussian_splats_histogram*",
-                "*gaussian_splats_sharpen*",
-                "*gaussian_splats_mirror*",
-                "*gaussian_splats_enhance*"
-            ],
             "Lop": [
-                "*gaussian_splats_import*"
+            ],
+            "Sop": [
             ]
         }
     },
     "plugin_settings": {
         "3dgs_render_mode": 0,
-        "3dgs_render_mode_level": 1,
         "3dgs_world_range": 50,
         "3dgs_spherical_harmonics_max": 3,
-        "3dgs_gsplat_count_max": 8388608
+        "3dgs_gsplat_count_max": 8388608,
+        "3dgs_use_anti_aliasing": 0
     }
 }
